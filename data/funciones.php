@@ -97,14 +97,14 @@
         }
     }
 
-    function actualizar_usuario($conn,$nombre,$apellido,$correo, $nombre_usuario, $contrasena,$id) {
+    function actualizar_usuario($conn,$nombre,$apellido,$correo,$contrasena,$id) {
         $conn = validar_conexion($conn);
         $sql = "UPDATE usuario SET nombre=?, apellido=?,correo=?,contrasena=?,nombre_usuario=? WHERE id=?";
         $contrasena = hash('sha256',$contrasena);
         //die($sql);
     
         if($stmt = $conn->prepare($sql)) {
-            $stmt->bind_param("sssssi", $nombre,$apellido,$correo,$contrasena,$nombre_usuario,$id);
+            $stmt->bind_param("ssssi", $nombre,$apellido,$correo,$contrasena,$id);
             /*
                 i - integer
                 d - double
@@ -234,6 +234,29 @@
         //$conn->close();
         return $result;
     }
+    function obtener_listado_productos_con_category($conn)
+    {
+        $conn = validar_conexion($conn);
+        $usuarios = [];
+        $sql = "SELECT P.*,C.nombre as category_nombre FROM producto U INNER JOIN categoria C ON P.id_category=U.id";
+        $result = $conn->query($sql);
+        
+        $i = 0;
+        while($row = $result->fetch_assoc()) {
+            $usuarios[$i]["id"] = $row["id"];
+            $usuarios[$i]["nombre"] = $row["nombre"];
+            $usuarios[$i]["precio"] = $row["precio"];
+            $usuarios[$i]["stock"] = $row["stock"];
+            $usuarios[$i]["descripcion"] = $row["descripcion"];
+            $usuarios[$i]["id_category"] = $row["id_category"];
+            $usuarios[$i]["category_nombre"] = $row["category_nombre"];
+            $i++;
+        }
+
+        //$conn->close();
+    
+        return $usuarios;
+    }
     function obtener_listado_productos($conn)
     {
         $conn = validar_conexion($conn);
@@ -254,6 +277,47 @@
         //$conn->close();
     
         return $productos;
+    }
+
+    function obtener_listado_roles($conn)
+    {
+        $conn = validar_conexion($conn);
+        $roles = [];
+        $sql = "SELECT id,nombre FROM rol ";
+        $result = $conn->query($sql);
+        
+        $i = 0;
+        while($row = $result->fetch_assoc()) {
+            $roles[$i]["id"] = $row["id"];
+            $roles[$i]["nombre"] = $row["nombre"];
+            $i++;
+        }
+
+        //$conn->close();
+    
+        return $roles;
+    }
+    function obtener_roless($conn, $id) {
+        $conn = validar_conexion($conn);
+        $usuario = [];
+        $sql = "SELECT * FROM rol WHERE id = ?";
+    
+        if($stmt = $conn->prepare($sql)) {
+    
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+            $stmt_result = $stmt->get_result();
+    
+            if ($stmt_result->num_rows>0) {
+                $row = $stmt_result->fetch_assoc();
+                $usuario["id"] = $row["id"];
+                $usuario["nombre"] = $row["nombre"];
+            }
+        }
+    
+        $stmt->close();
+        //$conn->close();
+        return $usuario;
     }
     function crear_rol($conn,$nombre) {
 
@@ -298,6 +362,7 @@
     
         return $rol;
     }
+
     function eliminar_rol($conn, $id) {
         $conn = validar_conexion($conn);
         $sql = "DELETE  FROM rol WHERE id = ?";
