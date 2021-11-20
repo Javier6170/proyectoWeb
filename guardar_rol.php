@@ -8,7 +8,7 @@
     require($BASE_ROOT_FOLDER."data/funciones.php");
     //var_dump($_POST);
 
-    $resultado = crear_rol($conn, $_POST['nombre']);
+    $resultado = crear_rol($conn, $_POST['nombre_rol']);
 
     if ($resultado) {
         header('Location:'.$BASE_ROOT_URL."rol.php?mensaje_update=Exito");

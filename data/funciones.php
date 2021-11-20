@@ -13,7 +13,7 @@
     {
         $conn = validar_conexion($conn);
         $usuarios = [];
-        $sql = "SELECT U.*,R.nombre as rol_nombre FROM usuario U INNER JOIN rol R ON U.rol_id=R.id";
+        $sql = "SELECT U.*,R.nombre_rol as rol_nombre FROM usuario U INNER JOIN rol R ON U.rol_id=R.id";
         $result = $conn->query($sql);
         
         $i = 0;
@@ -37,7 +37,7 @@
         $contrasena = hash("sha256",$contrasena);
 
         $conn = validar_conexion($conn);
-        $sql = "INSERT INTO usuario (nombre,apellido,correo,,contrasena,rol_id) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO usuario (nombre,apellido,correo,contrasena,rol_id) VALUES (?,?,?,?,?)";
  
         if($stmt = $conn->prepare($sql)) {
             $stmt->bind_param("ssssi", $nombre,$apellido,$correo,$contrasena,$rol_id);
@@ -56,7 +56,7 @@
     {
         $conn = validar_conexion($conn);
         $usuarios = [];
-        $result = $conn->query("SELECT * FROM usuario");
+        $result = $conn->query("SELECT * FROM usuario ");
         
         $i = 0;
         while($row = $result->fetch_assoc()) {
@@ -283,13 +283,13 @@
     {
         $conn = validar_conexion($conn);
         $roles = [];
-        $sql = "SELECT id,nombre FROM rol ";
+        $sql = "SELECT id,nombre_rol FROM rol ";
         $result = $conn->query($sql);
         
         $i = 0;
         while($row = $result->fetch_assoc()) {
             $roles[$i]["id"] = $row["id"];
-            $roles[$i]["nombre"] = $row["nombre"];
+            $roles[$i]["nombre_rol"] = $row["nombre_rol"];
             $i++;
         }
 
@@ -311,7 +311,7 @@
             if ($stmt_result->num_rows>0) {
                 $row = $stmt_result->fetch_assoc();
                 $usuario["id"] = $row["id"];
-                $usuario["nombre"] = $row["nombre"];
+                $usuario["nombre_rol"] = $row["nombre_rol"];
             }
         }
     
@@ -319,15 +319,15 @@
         //$conn->close();
         return $usuario;
     }
-    function crear_rol($conn,$nombre) {
+    function crear_rol($conn,$nombre_rol) {
 
         //var_dump($conn); die();
 
         $conn = validar_conexion($conn);
-        $sql = "INSERT INTO rol (nombre) VALUES (?)";
+        $sql = "INSERT INTO rol (nombre_rol) VALUES (?)";
  
         if($stmt = $conn->prepare($sql)) {
-            $stmt->bind_param("s",$nombre);
+            $stmt->bind_param("s",$nombre_rol);
             /*
                 i - integer
                 d - double
@@ -353,7 +353,7 @@
         $i = 0;
         while($row = $result->fetch_assoc()) {
             $rol[$i]["id"] = $row["id"];
-            $rol[$i]["nombre"] = $row["nombre"];
+            $rol[$i]["nombre_rol"] = $row["nombre_rol"];
 
             $i++;
         }
@@ -385,13 +385,13 @@
         //$conn->close();
         return $result;
     }
-    function actualizar_rol($conn, $id,$nombre) {
+    function actualizar_rol($conn, $id,$nombre_rol) {
         $conn = validar_conexion($conn);
-        $sql = "UPDATE rol SET nombre=? WHERE id=?";
+        $sql = "UPDATE rol SET nombre_rol=? WHERE id=?";
         //die($sql);
     
         if($stmt = $conn->prepare($sql)) {
-            $stmt->bind_param("si", $nombre,$id);
+            $stmt->bind_param("si", $nombre_rol,$id);
             /*
                 i - integer
                 d - double

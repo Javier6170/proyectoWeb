@@ -13,5 +13,5 @@
 
     require("required/header.php");
     require("required/menu/main-menu.php");
-    require("required/content/update-usuario.php");
+    require("required/content/update_usuario.php");
     require("required/footer.php");

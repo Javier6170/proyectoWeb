@@ -10,6 +10,15 @@
                     <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_usuario.php"><i class="fas fa-home"></i> Crear Usuario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php"><i class="fas fa-home"></i> Ver Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php"><i class="fas fa-home"></i> Crear Rol</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-gamepad"></i> Ver productos</a>
                 </li>
                 <li class="nav-item">

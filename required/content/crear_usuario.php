@@ -31,7 +31,7 @@
           <label for="rol" class="form-label">Rol</label>
           <select name="rol_id" id="rol_id">
             <?php foreach ($roles as $r) { ?>
-              <option value="<?php echo $r["id"]; ?>"><?php echo $r["nombre"]; ?></option>
+              <option value="<?php echo $r["id"]; ?>"><?php echo $r["nombre_rol"]; ?></option>
             <?php } ?>
           </select>
         </div>

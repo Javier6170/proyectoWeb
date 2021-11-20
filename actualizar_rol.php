@@ -13,5 +13,5 @@
 
     require("required/header.php");
     require("required/menu/main-menu.php");
-    require("required/content/update-rol.php");
+    require("required/content/update_rol.php");
     require("required/footer.php");
