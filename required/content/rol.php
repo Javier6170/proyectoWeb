@@ -20,7 +20,7 @@ $roles=obtener_listado_roles($conn);?>
                         
                         <td>
                             <?php
-                                echo $p["nombre"]
+                                echo $p["nombre_rol"]
                             ?>
                         
                         <td>
