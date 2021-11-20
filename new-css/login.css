@@ -1,10 +1,26 @@
 /*inicia el diseno del login*/
 
-.containerLogin {
-    background-size: 100vw 100vh;
-    height: 750px;
-    background-repeat: no-repeat;
-    padding: 80px 10px;
+.header {
+    display: flex;
+    color: #fff;
+}
+
+.content {
+    max-width: 50rem;
+    margin: auto;
+    text-align: center;
+    margin-left: -19px;
+}
+
+.header-content {
+    margin-top: 100px;
+    margin-left: 40px;
+    position: absolute;
+}
+
+.header-video video {
+    min-width: 110vh;
+    max-height: 117vh;
 }
 
 .containerFooter {
