@@ -1,10 +1,10 @@
 /*inicia el diseno del login*/
 
 .containerLogin {
-    background: url(https://www.xtrafondos.com/wallpapers/cyberhunter-8887.jpg);
     background-size: 100vw 100vh;
+    height: 750px;
     background-repeat: no-repeat;
-    padding: 50px 10px;
+    padding: 80px 10px;
 }
 
 .containerFooter {
@@ -74,7 +74,7 @@ p {
 @media (min-width: 768px) {
     .formulario {
         margin: auto;
-        width: 450px;
-        margin: 10px;
+        width: 420px;
+        margin: 20px;
     }
 }
