@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href="css/login.css">
+    <link rel= "stylesheet" href="css/menu.css">
+    
+    <script src="https://kit.fontawesome.com/2a261ef767.js" crossorigin="anonymous"></script>
+    <title>Registro</title>
+</head>
+
+
+<body>
+    <header class="header">
+		<div class="container">
+		<div class="btn-menu">
+			<label for="btn-menu">☰</label>
+		</div>
+			<div class="logo">
+				<h1>Menu</h1>
+			</div>
+			<nav class="menu">
+				<a href="#"><i class="fas fa-gamepad"></i>  Ver productos</a>
+				<a href="login.html"><i class="fas fa-sign-in-alt"></i>  Iniciar sesion</a>
+				<a href="#"><i class="fas fa-user"></i>  Registrarse</a>
+				<a href="#"><i class="fas fa-id-card-alt"></i>  Contacto</a>
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
+			<a href="#"><i class="fas fa-shopping-cart"></i>  Carrito de compras</a>
+			<a href="#"><i class="fas fa-history"></i>  Historial de compras</a>
+			<a href="#"><i class="fas fa-gamepad"></i>  Ver productos</a>
+			<a href="#">Facebook</a>
+			<a href="#">Youtube</a>
+			<a href="#">Instagram</a>
+		</nav>
+		<label for="btn-menu"><i class="fas fa-times-circle"></i></label>
+	</div>
+</div>
+    <form method="post" action="<?php echo $BASE_ROOT_URL; ?>crear_usuario.php" class="formulario">
+        <h1>Registrate</h1>
+        <div class="contenedor">
+            <div class="input-contenedor">
+                <i class="fas fa-user icon"></i>
+                <input type="text"placeholder="Nombre completo" name="nombre" id="nombre">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-envelope-square icon"></i>
+                <input type="text"placeholder="Correo" name="correo" id="correo">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password"placeholder="Contraseña" name="password"  id="password">
+            </div>
+            <div class="input-contenedor">
+                <i class="fas fa-key icon"></i>
+                <input type="password"placeholder="Confirma tu contraseña">
+            </div>
+            <button type="submit" class="button">Registrar</button>
+            <p>Ya tienes una cuenta? <a class="link" href="login.html">iniciar sesion</a></p>
+            </div>
+    </form>
+</body>
+</html>
