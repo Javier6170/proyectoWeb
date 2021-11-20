@@ -9,7 +9,6 @@
     <script src="https://kit.fontawesome.com/2a261ef767.js" crossorigin="anonymous"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="new-css/login.css" rel="stylesheet">
-    
 </head>
 
 <body>
