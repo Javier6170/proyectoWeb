@@ -1,7 +1,7 @@
 /*inicia el diseno del login*/
 
 .containerLogin {
-    background: url(https://www.xtrafondos.com/wallpapers/cyberhunter-8887.jpg);
+    background-color: white;
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     padding: 50px 10px;
@@ -78,3 +78,78 @@ p {
         margin: 10px;
     }
 }
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+ul.slider{
+  position: relative;
+  width: 533px;
+  height: 400px;
+}
+
+ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+ul.slider li img{
+  width: 533px;
+  height: 400px;
+  object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menu{
+  text-align: center;
+  margin: 20px;
+}
+
+.menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+.menu li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  background-color: grey;
+  padding: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  border-radius: 100%;
+}
+
+/*carousel slide*/
+
+/*@media (min-width: 768px) {
+    ul.slider {
+        margin: auto;
+        width: 400px;
+        margin: 10px;
+        margin-top: -400px;
+        margin-left: 600px;
+
+    }
+}
+
+  
+ 
