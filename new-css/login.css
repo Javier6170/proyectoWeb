@@ -1,5 +1,7 @@
 /*inicia el diseno del login*/
 
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&family=Shadows+Into+Light&display=swap');
 .header {
     display: flex;
     color: #fff;
@@ -13,18 +15,38 @@
 }
 
 .header-content {
-    margin-top: 100px;
-    margin-left: 250px;
+    margin-top: 200px;
+    margin-left: 260px;
     position: absolute;
 }
 
+.header-video {
+    background-color: black;
+}
+
 .header-video video {
-    min-width: 110vh;
-    max-height: 117vh;
+    min-width: 100vh;
+    max-height: 116.1vh;
 }
 
 .containerFooter {
-    margin-top: 15px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+h2#titulo {
+    color: red;
+    font-family: 'Comforter Brush', cursive;
+}
+
+.title-sub {
+    color: red;
+}
+
+.row {
+    align-items: center;
+    text-align: center;
 }
 
 .contenedor {
@@ -55,6 +77,22 @@ input[type="password"] {
 .input-contenedor {
     margin-bottom: 15px;
     border: 1px solid #aaa;
+}
+
+.left {
+    text-align: left;
+    font-size: 20px;
+    font-family: 'Comforter Brush', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.right {
+    text-align: right;
+    font-size: 20px;
+    font-family: 'Comforter Brush', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Shadows Into Light', cursive;
 }
 
 .icon {
@@ -97,16 +135,25 @@ p {
     }
 }
 
-ul, li {
+@media (min-width: 1367px) {
+    .header-content {
+        margin-top: 210px;
+        margin-left: 475px;
+        position: absolute;
+    }
+}
+
+ul,
+li {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-ul.slider{
-  position: relative;
-  width: 533px;
-  height: 400px;
+ul.slider {
+    position: relative;
+    width: 533px;
+    height: 400px;
 }
 
 ul.slider li {
@@ -117,41 +164,43 @@ ul.slider li {
     width: inherit;
     height: inherit;
     transition: opacity .5s;
-    background:#fff;
+    background: #fff;
 }
 
-ul.slider li img{
-  width: 533px;
-  height: 400px;
-  object-fit: cover;
+ul.slider li img {
+    width: 533px;
+    height: 400px;
+    object-fit: cover;
 }
 
 ul.slider li:first-child {
-    opacity: 1; /*Mostramos el primer <li>*/
+    opacity: 1;
+    /*Mostramos el primer <li>*/
 }
 
 ul.slider li:target {
-    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+    opacity: 1;
+    /*Mostramos el <li> del enlace que pulsemos*/
 }
 
-.menu{
-  text-align: center;
-  margin: 20px;
+.menu {
+    text-align: center;
+    margin: 20px;
 }
 
-.menu li{
-  display: inline-block;
-  text-align: center;
+.menu li {
+    display: inline-block;
+    text-align: center;
 }
 
-.menu li a{
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  background-color: grey;
-  padding: 10px;
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
-  border-radius: 100%;
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
 }
