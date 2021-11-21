@@ -23,7 +23,7 @@ Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones
     <textarea class="form-control" id="descripcion" placeholder="Ingrese una descripcion" name="descripcion"></textarea>
   </div>
   <div class="mb-3">
-    <label for="rol" class="form-label">Rol</label>
+    <label for="rol" class="form-label">Category</label>
     <select name="id_category" id="id_category">
         <?php foreach($roles as $r) { ?>    
             <option value="<?php echo $r["id"];?>"><?php echo $r["nombre"];?></option>

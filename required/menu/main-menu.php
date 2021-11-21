@@ -10,6 +10,25 @@
                     <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_usuario.php"><i class="fas fa-home"></i>Crear usuario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php.php"><i class="fas fa-home"></i>Ver Usuario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php"><i class="fas fa-home"></i>Crear Rol </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>rol.php"><i class="fas fa-home"></i>Ver Rol</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"><i class="fas fa-home"></i>Crear Video juegos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>producto.php"><i class="fas fa-home"></i>Ver producto</a>
+                </li>
+
+                <li class="nav-item">
                     <a class="nav-link" href="#"><i class="fas fa-gamepad"></i> Ver productos</a>
                 </li>
                 <li class="nav-item">

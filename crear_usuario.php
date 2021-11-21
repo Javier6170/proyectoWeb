@@ -10,7 +10,7 @@ require("data/funciones.php");
 //var_dump($conn);
 require("required/header.php");
 require("required/menu/main-menu.php");
-$roles = obtener_listado_usuarios($conn);
+$roles = obtener_listado_roles($conn);
 require("required/content/crear_usuario.php");
 require("required/footer.php");
 // require("required/content/pages.php");

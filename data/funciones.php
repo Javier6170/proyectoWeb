@@ -413,4 +413,29 @@
         $uri_segments = explode('/', $uri_path);
         return $uri_segments[count($uri_segments)-1]==''?'/':$uri_segments[count($uri_segments)-1];
     }
+    function crear_categoria($conn,$nombre) {
+
+        //var_dump($conn); die();
+
+        $conn = validar_conexion($conn);
+        $sql = "INSERT INTO category (nombre_rol) VALUES (?)";
+ 
+        if($stmt = $conn->prepare($sql)) {
+            $stmt->bind_param("s",$nombre);
+            /*
+                i - integer
+                d - double
+                s - string
+                b - BLOB
+            */
+            $stmt->execute();    
+            $result = TRUE;
+        } else{
+            $result = FALSE;
+        }
+        
+        $stmt->close();
+        //$conn->close();
+        return $result;
+    }
 

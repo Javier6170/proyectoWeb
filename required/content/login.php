@@ -15,7 +15,7 @@
                     <input type="password" placeholder="Contraseña">
                 </div>
                 <input type="submit" value="Iniciar sesion" class="button">
-                <p>No tienes una cuenta? <a class="link" href="<?php echo $BASE_ROOT_URL; ?>registro.php">Registrate</a></p>
+                <p>No tienes una cuenta? <a class="link" href="<?php echo $BASE_ROOT_URL; ?>crear_usuario.php">Registrate</a></p>
             </div>
         </form>
     </div>
