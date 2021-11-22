@@ -1,5 +1,3 @@
-/*inicia el diseno del login*/
-
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&family=Shadows+Into+Light&display=swap');
 .header {
@@ -197,6 +195,3 @@ section h2 {
 .estilo-a:hover .img-container img {
     transform: scale(1.2);
 }
-
-
-/* Estilo B */
