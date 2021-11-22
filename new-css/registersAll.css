@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&family=Shadows+Into+Light&display=swap');
+.container-admin {
+    background-image: url("https://redragon.es/content/uploads/2021/07/Footer-1920x678-1.jpg");
+    color: white;
+    font-family: 'Comforter Brush', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    align-items: center;
+}
+
+.register-title {
+    padding: 40px 40px 0px;
+    font-family: 'Comforter Brush', cursive;
+    color: red;
+}
+
+.form-register {
+    padding: 40px;
+}
