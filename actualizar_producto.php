@@ -6,12 +6,12 @@
     require($BASE_ROOT_FOLDER."config/config.php");
     require($BASE_ROOT_FOLDER."config/db.php");
     require($BASE_ROOT_FOLDER."data/funciones.php");    
-    $usuario=obtener_producto($conn, $_GET['id']);
+    $producto=obtener_producto($conn, $_GET['id']);
     //echo "<pre>".print_r($producto)."</pre>";
 
     $ubicacion = "Actualizar producro";    
 
     require("required/header.php");
     require("required/menu/main-menu.php");
-    require("required/content/update-producto.php");
+    require("required/content/update_producto.php");
     require("required/footer.php");
