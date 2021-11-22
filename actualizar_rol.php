@@ -6,7 +6,7 @@
     require($BASE_ROOT_FOLDER."config/config.php");
     require($BASE_ROOT_FOLDER."config/db.php");
     require($BASE_ROOT_FOLDER."data/funciones.php");    
-    $usuario=obtener_roless($conn, $_GET['id']);
+    $rol=obtener_roless($conn, $_GET['id']);
     //echo "<pre>".print_r($producto)."</pre>";
 
     $ubicacion = "Actualizar rol";    

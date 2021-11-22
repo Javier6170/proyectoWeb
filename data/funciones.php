@@ -95,11 +95,16 @@
               
             }
         }
+        $stmt->close();
+        //$conn->close();
+        return $usuario;
+        
     }
 
-    function actualizar_usuario($conn,$nombre,$apellido,$correo,$contrasena,$id) {
+
+    function actualizar_usuario($conn,$id,$nombre,$apellido,$correo,$contrasena) {
         $conn = validar_conexion($conn);
-        $sql = "UPDATE usuario SET nombre=?, apellido=?,correo=?,contrasena=?,nombre_usuario=? WHERE id=?";
+        $sql = "UPDATE usuario SET nombre=?, apellido=?,correo=?,contrasena=? WHERE id=?";
         $contrasena = hash('sha256',$contrasena);
         //die($sql);
     
@@ -188,6 +193,9 @@
               
             }
         }
+        $stmt->close();
+        //$conn->close();
+        return $producto;
     }
     function actualizar_producto($conn,$nombre, $precio, $stock, $descripcion,$id) {
         $conn = validar_conexion($conn);
@@ -237,26 +245,26 @@
     function obtener_listado_productos_con_category($conn)
     {
         $conn = validar_conexion($conn);
-        $usuarios = [];
-        $sql = "SELECT P.*,C.nombre as category_nombre FROM producto U INNER JOIN categoria C ON P.id_category=U.id";
+        $categorias = [];
+        $sql = "SELECT P.*,C.nombre as category_nombre FROM producto P INNER JOIN categoria C ON P.id_category=C.id";
         $result = $conn->query($sql);
-        
         $i = 0;
         while($row = $result->fetch_assoc()) {
-            $usuarios[$i]["id"] = $row["id"];
-            $usuarios[$i]["nombre"] = $row["nombre"];
-            $usuarios[$i]["precio"] = $row["precio"];
-            $usuarios[$i]["stock"] = $row["stock"];
-            $usuarios[$i]["descripcion"] = $row["descripcion"];
-            $usuarios[$i]["id_category"] = $row["id_category"];
-            $usuarios[$i]["category_nombre"] = $row["category_nombre"];
+            $categorias[$i]["id"] = $row["id"];
+            $categorias[$i]["nombre"] = $row["nombre"];
+            $categorias[$i]["precio"] = $row["precio"];
+            $categorias[$i]["stock"] = $row["stock"];
+            $categorias[$i]["descripcion"] = $row["descripcion"];
+            $categorias[$i]["id_category"] = $row["id_category"];
+            $categorias[$i]["category_nombre"] = $row["category_nombre"];
             $i++;
         }
 
         //$conn->close();
     
-        return $usuarios;
+        return $categorias;
     }
+    
     function obtener_listado_productos($conn)
     {
         $conn = validar_conexion($conn);
@@ -299,7 +307,7 @@
     }
     function obtener_roless($conn, $id) {
         $conn = validar_conexion($conn);
-        $usuario = [];
+        $rol = [];
         $sql = "SELECT * FROM rol WHERE id = ?";
     
         if($stmt = $conn->prepare($sql)) {
@@ -310,14 +318,14 @@
     
             if ($stmt_result->num_rows>0) {
                 $row = $stmt_result->fetch_assoc();
-                $usuario["id"] = $row["id"];
-                $usuario["nombre_rol"] = $row["nombre_rol"];
+                $rol["id"] = $row["id"];
+                $rol["nombre_rol"] = $row["nombre_rol"];
             }
         }
     
         $stmt->close();
         //$conn->close();
-        return $usuario;
+        return $rol;
     }
     function crear_rol($conn,$nombre_rol) {
 
@@ -418,10 +426,115 @@
         //var_dump($conn); die();
 
         $conn = validar_conexion($conn);
-        $sql = "INSERT INTO category (nombre_rol) VALUES (?)";
+        $sql = "INSERT INTO categoria (nombre) VALUES (?)";
  
         if($stmt = $conn->prepare($sql)) {
             $stmt->bind_param("s",$nombre);
+            /*
+                i - integer
+                d - double
+                s - string
+                b - BLOB
+            */
+            $stmt->execute();    
+            $result = TRUE;
+        } else{
+            $result = FALSE;
+        }
+        
+        $stmt->close();
+        //$conn->close();
+        return $result;
+    }
+    function obtener_listado_categorias($conn)
+    {
+        $conn = validar_conexion($conn);
+        $categorias = [];
+        $sql = "SELECT id,nombre FROM categoria ";
+        $result = $conn->query($sql);
+        
+        $i = 0;
+        while($row = $result->fetch_assoc()) {
+            $categorias[$i]["id"] = $row["id"];
+            $categorias[$i]["nombre"] = $row["nombre"];
+            $i++;
+        }
+
+        //$conn->close();
+    
+        return $categorias;
+    }
+
+  
+    function obtener_categoria($conn, $id) {
+        $conn = validar_conexion($conn);
+        $categorias = [];
+        $sql = "SELECT * FROM categoria WHERE id = ?";
+    
+        if($stmt = $conn->prepare($sql)) {
+    
+            $stmt->bind_param("i", $id);
+            $stmt->execute();
+            $stmt_result = $stmt->get_result();
+    
+            if ($stmt_result->num_rows>0) {
+                $row = $stmt_result->fetch_assoc();
+                $categorias["id"] = $row["id"];
+                $categorias["nombre"] = $row["nombre"];
+            }
+        }
+    
+        $stmt->close();
+        //$conn->close();
+        return $categorias;
+    }
+
+    function actualizar_categoria($conn, $id,$nombre) {
+        $conn = validar_conexion($conn);
+        $sql = "UPDATE categoria SET nombre=? WHERE id=?";
+        //die($sql);
+    
+        if($stmt = $conn->prepare($sql)) {
+            $stmt->bind_param("si", $nombre,$id);
+            /*
+                i - integer
+                d - double
+                s - string
+                b - BLOB
+            */
+            $stmt->execute();    
+            $result = TRUE;
+        } else{
+            $result = FALSE;
+        }
+        $stmt->close();
+        //$conn->close();
+        return $result;
+    }
+    function obtener_catego($conn)
+    {
+        $conn = validar_conexion($conn);
+        $categorias = [];
+        $result = $conn->query("SELECT * FROM rol");
+        
+        $i = 0;
+        while($row = $result->fetch_assoc()) {
+            $categorias[$i]["id"] = $row["id"];
+            $categorias[$i]["nombre_rol"] = $row["nombre_rol"];
+
+            $i++;
+        }
+
+        //$conn->close();
+    
+        return $categorias;
+    }
+    function eliminar_categoria($conn, $id) {
+        $conn = validar_conexion($conn);
+        $sql = "DELETE  FROM categoria WHERE id = ?";
+    
+        if($stmt = $conn->prepare($sql)) {
+            $stmt->bind_param("i", $id);
             /*
                 i - integer
                 d - double
