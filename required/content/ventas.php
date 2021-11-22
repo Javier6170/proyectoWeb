@@ -3,55 +3,49 @@
     <div class="card estilo-a">
         <a href="#">
             <div class="img-container">
-                <img src="media/img1.jpg" alt="producto 1">
+                <img src="https://redragon.es/content/uploads/2021/09/MITRA.png" alt="producto 1">
             </div>
-            <p>Teclado gamer + audifonos + mouse</p>
-            <strong>$190.000</strong>
+            <p>Teclados</p>
         </a>
     </div>
     <div class="card estilo-a">
         <a href="#">
             <div class="img-container">
-                <img src="media/img4.jpg" alt="producto 1">
+                <img src="https://redragon.es/content/uploads/2021/04/HARROW.png" alt="producto 1">
             </div>
-            <p>Audifonos gamer</p>
-            <strong>$120.000</strong>
+            <p>Mandos</p>
         </a>
     </div>
     <div class="card estilo-a">
         <a href="#">
             <div class="img-container">
-                <img src="media/img5.jpg" alt="producto 1">
+                <img src="https://redragon.es/content/uploads/2021/06/EMERALD-1.png" alt="producto 1">
             </div>
-            <p> * edicion * board game the walking dead</p>
-            <strong>$70.000</strong>
+            <p>Monitores</p>
         </a>
     </div>
     <div class="card estilo-a">
         <a href="#">
             <div class="img-container">
-                <img src="media/img8.jpg" alt="producto 1">
+                <img src="https://redragon.es/content/uploads/2021/04/COBRA.png" alt="producto 1">
             </div>
-            <p>geforce rtx 3080</p>
-            <strong>$2.600.000</strong>
+            <p>Ratones</p>
         </a>
     </div>
     <div class="card estilo-a">
         <a href="#">
             <div class="img-container">
-                <img src="media/img9.jpg" alt="producto 1">
+                <img src="https://redragon.es/content/uploads/2021/09/ZEUS-X.png" alt="producto 1">
             </div>
-            <p>Teclado gamer retro luminico</p>
-            <strong>$110.000</strong>
+            <p>Audio</p>
         </a>
     </div>
     <div class="card estilo-a">
         <a href="#">
             <div class="img-container">
-                <img src="media/img12.jpg" alt="producto 1">
+                <img src="https://redragon.es/content/uploads/2021/05/C502-BR.png" alt="producto 1">
             </div>
-            <p>pc gamer i9</p>
-            <strong>$5.600.000</strong>
+            <p>Sillas</p>
         </a>
     </div>
 </section>

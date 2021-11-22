@@ -12,6 +12,10 @@
     margin-left: -19px;
 }
 
+section{
+    background-color: black;
+}
+
 .header-content {
     margin-top: 200px;
     margin-left: 260px;
@@ -161,6 +165,14 @@ section h2 {
 
 .card {
     width: 33.333333%;
+    background-color: black;
+}
+h2{
+    text-align: center;
+}
+
+p{
+    color: white;
 }
 
 
@@ -195,3 +207,4 @@ section h2 {
 .estilo-a:hover .img-container img {
     transform: scale(1.2);
 }
+
