@@ -19,6 +19,7 @@
     </script>
     <script src="js/passwordSame.js"></script>
     <link href="new-css/login.css" rel="stylesheet">
+    <link href="new-css/registersAll.css" rel="stylesheet">
 </head>
 
 <body>
