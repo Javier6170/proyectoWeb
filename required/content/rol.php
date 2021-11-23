@@ -1,12 +1,14 @@
 <?php
 $roles=obtener_listado_roles($conn);?>
-<br><br>
-<h3>Listado de Usuarios</h3>
-<br><br>
-
+<div class="container-views">
+    <div class="title-listado">
+        <h3>Listado de roles</h3>
+    </div>
+    <div class="table-listado">
 <table class="table">
             <thead>
                 <tr>
+                <th scope="col">#id</th>
                     <th scope="col">nombre</th>
                     <th scopre="col" colspan="2">Acciones</th>
                 </tr>
@@ -17,17 +19,22 @@ $roles=obtener_listado_roles($conn);?>
                     
                 ?>
                     <tr>
+                    <td>
+                            <?php
+                                echo $p["id"]
+                            ?>
+                         </td>
                         
                         <td>
                             <?php
                                 echo $p["nombre_rol"]
                             ?>
-                        
+                         </td>
                         <td>
-                            <a href="<?php echo $BASE_ROOT_URL;?>actualizar_rol.php?id=<?php echo $p["id"];?>">Actualizar
+                            <a class="btns" href="<?php echo $BASE_ROOT_URL;?>actualizar_rol.php?id=<?php echo $p["id"];?>">Actualizar
                             </a>
                         </td>
-                        <td> <a href="#" onClick="eliminar_rol(<?php echo $p["id"]?>);">Eliminar</a></td>
+                        <td> <a class="btns" href="#" onClick="eliminar_rol(<?php echo $p["id"]?>);">Eliminar</a></td>
                     </tr>
                     
                 <?php 
@@ -35,3 +42,5 @@ $roles=obtener_listado_roles($conn);?>
                 ?>
                 </tbody>
                 </table>
+                </div>
+</div>

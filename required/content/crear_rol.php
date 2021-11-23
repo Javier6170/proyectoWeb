@@ -8,7 +8,8 @@
         <div class="mb-3">
             <label for="nombre_rol" class="form-label"><h4>Nombre</h4></label>
             <input type="text" class="form-control" id="nombre_rol" name="nombre_rol" required placeholder="ingresa el nombre del rol">
-        </div><button type="submit" class="btn btn-danger">Crear nuevo rol</button>
+        </div>
+        <button type="submit" class="btn btn-danger">Crear nuevo rol</button>
     </form>
 </div>
 </div>

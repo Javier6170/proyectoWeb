@@ -1,8 +1,10 @@
 <?php
 $productos = obtener_listado_productos_con_category($conn); ?>
-<br><br>
-<h3>Listado de Productos</h3>
-<br><br>
+<div class="container-views">
+    <div class="title-listado">
+        <h3>Listado de productos</h3>
+    </div>
+    <div class="table-listado">
 
 <table class="table">
     <thead>
@@ -59,10 +61,10 @@ $productos = obtener_listado_productos_con_category($conn); ?>
 
                 </td>
                 <td>
-                <a href="<?php echo $BASE_ROOT_URL; ?>actualizar_producto.php?id=<?php echo $p["id"]; ?>">Actualizar
+                <a class="btns" href="<?php echo $BASE_ROOT_URL; ?>actualizar_producto.php?id=<?php echo $p["id"]; ?>">Actualizar
                 </a>
                 </td>
-                <td> <a href="#" onClick="eliminar_productos(<?php echo $p["id"] ?>);">Eliminar</a></td>
+                <td> <a class="btns" href="#" onClick="eliminar_productos(<?php echo $p["id"] ?>);">Eliminar</a></td>
             </tr>
 
         <?php
@@ -70,3 +72,5 @@ $productos = obtener_listado_productos_con_category($conn); ?>
         ?>
     </tbody>
 </table>
+</div>
+</div>

@@ -1,10 +1,9 @@
-<br><br>
-<h3>Actualizar categoria</h3>
-<br><br>
+<center>
+<div class="container-admin">
+<div class="register-title">
+    <h3>Crear Nuevo rol</h3>
+</div>
 
-<!-- 
-Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones    
--->
 <form method="post" action="<?php echo $BASE_ROOT_URL; ?>guardar_cambios_categoria.php">
 <input type="hidden" name="id" value="<?php echo $categoria['id']?>">
   <div class="mb-3">
@@ -13,7 +12,8 @@ Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones
         value="<?php echo $categoria['nombre']?>"
     >
 
-  <button type="submit" class="btn btn-primary">Actualizar Rol</button>
+  <button  class="btns" type="submit" class="btn btn-primary">Actualizar Rol</button>
 </form>
-
-<br><br>
+</div>
+</div>
+</center>

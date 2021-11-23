@@ -1,10 +1,9 @@
-<br><br>
-<h3>Actualizar Usuario</h3>
-<br><br>
-
-<!-- 
-Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones    
--->
+<center>
+<div class="container-admin">
+<div class="register-title">
+    <h3>Crear Nuevo rol</h3>
+</div>
+<div class="form-register">
 <form method="post" action="<?php echo $BASE_ROOT_URL; ?>guardar_cambios_usuarios.php">
 <input type="hidden" name="id" value="<?php echo $usuario['id']?>">
   <div class="mb-3">
@@ -31,7 +30,8 @@ Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones
         value="<?php echo $usuario['contrasena']?>"
     >
   </div>
-  <button type="submit" class="btn btn-primary">Actualizar Usuario</button>
+  <button  class="btns" type="submit" class="btn btn-primary">Actualizar Usuario</button>
 </form>
-
-<br><br>
+</div>
+</div>
+</center>
