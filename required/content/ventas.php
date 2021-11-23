@@ -9,7 +9,7 @@
         </a>
     </div>
     <div class="card estilo-a">
-        <a href="#">
+        <a href="<?php echo $BASE_ROOT_URL; ?>mandos.php">
             <div class="img-container">
                 <img src="https://redragon.es/content/uploads/2021/04/HARROW.png" alt="producto 1">
             </div>
@@ -17,7 +17,7 @@
         </a>
     </div>
     <div class="card estilo-a">
-        <a href="#">
+        <a href="<?php echo $BASE_ROOT_URL; ?>monitores.php">
             <div class="img-container">
                 <img src="https://redragon.es/content/uploads/2021/06/EMERALD-1.png" alt="producto 1">
             </div>
@@ -25,7 +25,7 @@
         </a>
     </div>
     <div class="card estilo-a">
-        <a href="#">
+        <a href="<?php echo $BASE_ROOT_URL; ?>ratones.php">
             <div class="img-container">
                 <img src="https://redragon.es/content/uploads/2021/04/COBRA.png" alt="producto 1">
             </div>
@@ -33,7 +33,7 @@
         </a>
     </div>
     <div class="card estilo-a">
-        <a href="#">
+        <a href="<?php echo $BASE_ROOT_URL; ?>audio.php">
             <div class="img-container">
                 <img src="https://redragon.es/content/uploads/2021/09/ZEUS-X.png" alt="producto 1">
             </div>
@@ -41,7 +41,7 @@
         </a>
     </div>
     <div class="card estilo-a">
-        <a href="#">
+        <a href="<?php echo $BASE_ROOT_URL; ?>teclados.php">
             <div class="img-container">
                 <img src="https://redragon.es/content/uploads/2021/05/C502-BR.png" alt="producto 1">
             </div>
