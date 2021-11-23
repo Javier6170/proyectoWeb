@@ -51,6 +51,9 @@
 </div>
 <script src="bootstrap/js/bootstrap.js"></script>
 <script src="bootstrap/js/popper.min.js"></script>
+<script>
+    const BASE_ROOT_URL = "<?php echo $BASE_ROOT_URL ?>";
+</script>
 </body>
 
 </html>

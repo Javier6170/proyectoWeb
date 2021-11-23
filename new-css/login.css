@@ -181,6 +181,7 @@ p {
 
 .estilo-a {
     font-family: sans-serif;
+    z-index: 3;
 }
 
 .estilo-a a {
@@ -294,7 +295,7 @@ strong {
     position: absolute;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
-    height: 100vh;
+    height: 116.3vh;
     top: 0;
     left: 0;
     transition: all 500ms ease;
@@ -309,12 +310,13 @@ strong {
 
 .cont-menu {
     width: 100%;
-    max-width: 250px;
+    max-width: 350px;
     background: #1c1c1c;
-    height: 100vh;
+    height: 116.3vh;
     position: relative;
     transition: all 500ms ease;
     transform: translateX(-100%);
+    z-index: 2;
 }
 
 #btn-menu:checked~.container-menu .cont-menu {
@@ -350,4 +352,9 @@ strong {
 
 .menu a:hover {
     background: red;
+}
+
+.title-productos {
+    color: red;
+    font-family: 'Comforter Brush', cursive;
 }

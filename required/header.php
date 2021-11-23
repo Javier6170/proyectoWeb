@@ -18,9 +18,11 @@
         const BASE_ROOT_URL = "<?php echo $BASE_ROOT_URL ?>";
     </script>
     <script src="js/passwordSame.js"></script>
+
     <link href="new-css/login.css" rel="stylesheet">
     <link href="new-css/registersAll.css" rel="stylesheet">
     <link href="new-css/viewsDates.css" rel="stylesheet">
+    
 </head>
 
 <body>

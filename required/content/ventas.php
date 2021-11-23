@@ -1,5 +1,5 @@
-<section>
-    <h2><i class="fas fa-gamepad"></i>Nuestros productos</h2>
+<section class="section-ventas">
+    <h2 class="title-productos">Nuestros productos</h2>
     <div class="card estilo-a">
         <a href="<?php echo $BASE_ROOT_URL; ?>teclados.php">
             <div class="img-container">
