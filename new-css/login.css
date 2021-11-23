@@ -12,14 +12,8 @@
     margin-left: -19px;
 }
 
-section{
+section {
     background-color: black;
-}
-
-.header-content {
-    margin-top: 200px;
-    margin-left: 260px;
-    position: absolute;
 }
 
 .header-video {
@@ -27,8 +21,10 @@ section{
 }
 
 .header-video video {
+    margin-top: -100px;
     min-width: 100vh;
     max-height: 116.1vh;
+    /**116.1*/
 }
 
 .containerFooter {
@@ -56,29 +52,10 @@ h2#titulo {
     padding: 25px;
 }
 
-.formulario {
-    color: black;
-    background: #fff;
-    border-radius: 15px;
-}
-
 h1 {
     text-align: center;
     font-size: 40px;
     color: #1a2537;
-}
-
-input[type="text"],
-input[type="password"] {
-    font-size: 20px;
-    width: 82%;
-    padding: 10px;
-    border: none;
-}
-
-.input-contenedor {
-    margin-bottom: 15px;
-    border: 1px solid #aaa;
 }
 
 .left {
@@ -128,15 +105,6 @@ p {
     color: #1a2537;
 }
 
-@media (min-width: 768px) {
-    .formulario {
-        margin: auto;
-        width: 420px;
-        margin: 215px 215px 0px;
-        margin-top: -45px;
-    }
-}
-
 @media (min-width: 1367px) {
     .header-content {
         margin-top: 210px;
@@ -167,11 +135,12 @@ section h2 {
     width: 33.333333%;
     background-color: black;
 }
-h2{
+
+h2 {
     text-align: center;
 }
 
-p{
+p {
     color: white;
 }
 
@@ -207,7 +176,6 @@ p{
 .estilo-a:hover .img-container img {
     transform: scale(1.2);
 }
-
 strong{
     color: white;
 }

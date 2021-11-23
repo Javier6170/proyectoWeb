@@ -5,7 +5,7 @@
 <!-- 
 Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones    
 -->
-<form method="post" action="<?php echo $BASE_ROOT_URL; ?>guardar_cambios_usuario.php">
+<form method="post" action="<?php echo $BASE_ROOT_URL; ?>guardar_cambios_usuarios.php">
 <input type="hidden" name="id" value="<?php echo $usuario['id']?>">
   <div class="mb-3">
     <label for="nombre" class="form-label">Nombre</label>

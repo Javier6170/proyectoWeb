@@ -1,5 +1,5 @@
 <?php 
-$ubicacion = "Lista Usuarios | Store dark";
+$ubicacion = "inicio";
 require("config/config.php");
 require("config/db.php");
 require("data/funciones.php");
@@ -13,7 +13,7 @@ require("required/menu/main-menu.php");
 if(isset($_GET['mensaje'])) {
 ?>
     <script>
-        alert("Exito creando el usuario!");
+        alert("Exito creando la categoria!");
     </script>
 <?php
 }
@@ -21,7 +21,7 @@ if(isset($_GET['mensaje'])) {
 if(isset($_GET['mensaje_eliminar'])) {
     ?>
         <script>
-            alert("Exito eliminando el usuario!");
+            alert("Exito eliminando la categoria!");
         </script>
     
     <?php
@@ -30,7 +30,7 @@ if(isset($_GET['mensaje_eliminar'])) {
 if(isset($_GET['mensaje_update'])) {
     ?>
         <script>
-            alert("Exito actualizando el usuario!");
+            alert("Exito actualizando la categoria!");
         </script>
     
     <?php
@@ -39,13 +39,13 @@ if(isset($_GET['mensaje_update'])) {
 if(isset($_GET['error'])) {
     ?>
         <script>
-            alert("Error al crear al producto!");
+            alert("Error al crear la categoria!");
         </script>
     
     <?php
     }
 
-require("required/content/usuarios.php");
+require("required/content/categoria.php");
 require("required/footer.php");
 // require("required/content/pages.php");
 // require("required/message/msj-one.php");

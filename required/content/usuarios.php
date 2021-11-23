@@ -1,68 +1,71 @@
 <?php
-$usuarios=obtener_listado_usuarios_con_rol($conn);?>
-<br><br>
-<h3>Listado de Usuarios</h3>
-<br><br>
-
-<table class="table">
+$usuarios = obtener_listado_usuarios_con_rol($conn); ?>
+<div class="container-views">
+    <div class="title-listado">
+        <h3>Listado de Usuarios</h3>
+    </div>
+    <div class="table-listado">
+        <table class="table">
             <thead>
                 <tr>
                     <th scope="col">#Id</th>
-                    <th scope="col">Nombres</th>
-                    <th scope="col">Correo electrónico</th>
-                    <th scope="col">Nombre de Usuario</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Correo</th>
                     <th scope="col">Rol</th>
-                    <th scopre="col" colspan="2">Acciones</th>
+                    <th scopre="col" colspan="2" style="padding-left: 50px;">Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                    foreach($usuarios as $index=>$p){                          
-                    
+                foreach ($usuarios as $index => $p) {
+
                 ?>
                     <tr>
-                        
+
                         <td>
                             <?php
-                                echo $p["id"]
+                            echo $p["id"]
                             ?>
 
                         </td>
                         <td>
                             <?php
-                                echo $p["nombre"]
+                            echo $p["nombre"]
                             ?>
 
                         </td>
                         <td>
                             <?php
-                                echo $p["apellido"]
+                            echo $p["apellido"]
                             ?>
 
                         </td>
                         <td>
                             <?php
-                                echo $p["correo"]
+                            echo $p["correo"]
                             ?>
 
                         </td>
-                        
+
                         <td>
                             <?php
-                                echo $p["rol_nombre"]
+                            echo $p["rol_nombre"]
                             ?>
 
                         </td>
-                        
+
                         <td>
-                            <a href="<?php echo $BASE_ROOT_URL;?>actualizar_usuario.php?id=<?php echo $p["id"];?>">Actualizar
+                            <a class="btns" href="<?php echo $BASE_ROOT_URL; ?>actualizar_usuario.php?id=<?php echo $p["id"]; ?>">Actualizar
                             </a>
                         </td>
-                        <td> <a href="#" onClick="eliminar_usuario(<?php echo $p["id"]?>);">Eliminar</a></td>
+                        <td> <a class="btns" href="#" onClick="eliminar_usuario(<?php echo $p["id"] ?>);">Eliminar</a></td>
                     </tr>
-                    
-                <?php 
-                    } 
+
+                <?php
+                }
                 ?>
-                </tbody>
-                </table>
+            </tbody>
+        </table>
+    </div>
+</div>
