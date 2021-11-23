@@ -29,6 +29,8 @@
             </div>
                 <p>SHIVA K512</p>
                 <p>$220.000 COP</p>
+
+                
         </a>
     </div>
     <div class="card estilo-a">
