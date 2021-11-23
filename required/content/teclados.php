@@ -9,7 +9,7 @@
             <div class="img-container">
                 <img src="https://redragon.es/content/uploads/2021/09/MITRA.png" alt="producto 1">
             </div>
-                <p>  MITRA K551</p>
+                <p> MITRA K551</p>
                 <p>$200.000 COP</p>
         </a>
     </div>
