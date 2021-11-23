@@ -1,11 +1,10 @@
 <section>
     <h2><i class="fas fa-gamepad"></i>Nuestros productos</h2>
     <div class="card estilo-a">
-        <a href="#">
+        <a href="<?php echo $BASE_ROOT_URL; ?>teclados.php">
             <div class="img-container">
                 <img src="https://redragon.es/content/uploads/2021/09/MITRA.png" alt="producto 1">
             </div>
-            <p>Teclados</p>
         </a>
     </div>
     <div class="card estilo-a">
