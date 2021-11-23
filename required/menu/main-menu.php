@@ -1,6 +1,10 @@
 <nav class="navbar navbar-dark bg-dark" aria-label="First navbar example">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Store dark</a>
+        <div>
+            <button type="button" class="btn btn-outline-light me-2">Login</button>
+            <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -43,5 +47,6 @@
                 </li>
             </ul>
         </div>
+
     </div>
 </nav>
