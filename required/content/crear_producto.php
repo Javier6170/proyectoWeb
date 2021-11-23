@@ -1,10 +1,9 @@
-<br><br>
+<center>
+<div class="container-admin">
+<div class="register-title">
 <h3>Crear Nuevo Producto</h3>
-<br><br>
-
-<!-- 
-Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones    
--->
+</div>
+<div class="form-register">
 <form method="post" action="<?php echo $BASE_ROOT_URL; ?>guardar_productos.php">
 <div class="mb-3">
     <label for="nombre" class="form-label">Nombre</label>
@@ -19,8 +18,10 @@ Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones
     <input type="text" class="form-control" id="stock" name="stock"  placeholder="Ingrese stock del producto" required>
   </div>
   <div class="mb-3">
+
     <label for="descripcion" class="form-label">Descripcion</label>
-    <textarea class="form-control" id="descripcion" placeholder="Ingrese una descripcion" name="descripcion"></textarea>
+    <br>
+    <textarea class="form-control-area" id="descripcion" placeholder="Ingrese una descripcion" name="descripcion"></textarea>
   </div>
   <div class="mb-3">
     <label for="rol" class="form-label">Category</label>
@@ -30,7 +31,9 @@ Nombre	Unidad	Precio unitario	Cantidad disponible	Observaciones
         <?php } ?>
     </select>
   </div>
-  <button type="submit" class="btn btn-primary">Crear Producto Nuevo</button>
+  <button type="submit"  class="btn btn-danger">Crear Producto Nuevo</button>
 </form>
+</div>
+</div>
+<center>
 
-<br><br>

@@ -18,3 +18,12 @@
 .form-register {
     padding: 40px;
 }
+
+.form-register {
+    width: 800px;
+}
+
+textarea {
+    width: 600px;
+    max-height: 70px;
+}

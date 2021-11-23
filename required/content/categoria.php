@@ -1,8 +1,10 @@
 <?php
 $categorias = obtener_listado_categorias($conn); ?>
-<br><br>
-<h3>Listado de Categorias</h3>
-<br><br>
+<div class="container-views">
+    <div class="title-listado">
+        <h3>Listado de productos</h3>
+    </div>
+    <div class="table-listado">
 
 <table class="table">
     <thead>
@@ -24,10 +26,10 @@ $categorias = obtener_listado_categorias($conn); ?>
                     ?>
 
                 <td>
-                    <a href="<?php echo $BASE_ROOT_URL; ?>actualizar_categoria.php?id=<?php echo $p["id"]; ?>">Actualizar
+                    <a  class="btns" href="<?php echo $BASE_ROOT_URL; ?>actualizar_categoria.php?id=<?php echo $p["id"]; ?>">Actualizar
                     </a>
                 </td>
-                <td> <a href="#" onClick="eliminar_categoria(<?php echo $p["id"] ?>);">Eliminar</a></td>
+                <td> <a class="btns" href="#" onClick="eliminar_categoria(<?php echo $p["id"] ?>);">Eliminar</a></td>
             </tr>
 
         <?php
@@ -35,3 +37,5 @@ $categorias = obtener_listado_categorias($conn); ?>
         ?>
     </tbody>
 </table>
+</div>
+</div>
