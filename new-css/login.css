@@ -12,7 +12,7 @@
     margin-left: -19px;
 }
 
-section{
+section {
     background-color: black;
 }
 
@@ -167,11 +167,12 @@ section h2 {
     width: 33.333333%;
     background-color: black;
 }
-h2{
+
+h2 {
     text-align: center;
 }
 
-p{
+p {
     color: white;
 }
 
@@ -208,7 +209,7 @@ p{
     transform: scale(1.2);
 }
 
-strong{
+strong {
     color: white;
 }
 
@@ -219,46 +220,56 @@ strong{
     }
 }
 
-.capa{
+.capa {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
 }
 
-.sup{
+.sup {
     width: 100%;
     height: 100px;
     position: fixed;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
-.container{
+
+.container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
-.container .btn-menu, .logo{
+
+.container .btn-menu,
+.logo {
     float: left;
-    line-height:100px;
+    line-height: 100px;
 }
-.container .btn-menu label{
+
+.container .btn-menu label {
     color: #fff;
     font-size: 25px;
     cursor: pointer;
 }
-.logo h1{
+
+.logo h1 {
     color: #fff;
     font-weight: 400;
     font-size: 22px;
     margin-left: 10px;
 }
-.container .menu{
+
+.container .menu {
     float: right;
     line-height: 100px;
 }
-.container .menu a{
+
+.container .menu a {
     display: inline-block;
     padding: 15px;
     line-height: normal;
@@ -269,28 +280,34 @@ strong{
     font-size: 15px;
     margin-right: 5px;
 }
-.container .menu a:hover{
+
+.container .menu a:hover {
     border-bottom: 2px solid #c7c7c7;
     padding-bottom: 5px;
 }
-#btn-menu{
+
+#btn-menu {
     display: none;
 }
-.container-menu{
+
+.container-menu {
     position: absolute;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100vh;
-    top: 0;left: 0;
+    top: 0;
+    left: 0;
     transition: all 500ms ease;
     opacity: 0;
     visibility: hidden;
 }
-#btn-menu:checked ~ .container-menu{
+
+#btn-menu:checked~.container-menu {
     opacity: 1;
     visibility: visible;
 }
-.cont-menu{
+
+.cont-menu {
     width: 100%;
     max-width: 250px;
     background: #1c1c1c;
@@ -299,13 +316,16 @@ strong{
     transition: all 500ms ease;
     transform: translateX(-100%);
 }
-#btn-menu:checked ~ .container-menu .cont-menu{
+
+#btn-menu:checked~.container-menu .cont-menu {
     transform: translateX(0%);
 }
-.cont-menu nav{
+
+.cont-menu nav {
     transform: translateY(15%);
 }
-.cont-menu nav a{
+
+.cont-menu nav a {
     display: block;
     text-decoration: none;
     padding: 20px;
@@ -313,11 +333,13 @@ strong{
     border-left: 5px solid transparent;
     transition: all 400ms ease;
 }
-.cont-menu nav a:hover{
+
+.cont-menu nav a:hover {
     border-left: 5px solid #c7c7c7;
-    background:red;
+    background: red;
 }
-.cont-menu label{
+
+.cont-menu label {
     position: absolute;
     right: 5px;
     top: 10px;
@@ -326,6 +348,6 @@ strong{
     font-size: 18px;
 }
 
-.menu a:hover{
-    background:red;
+.menu a:hover {
+    background: red;
 }
