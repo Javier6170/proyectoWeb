@@ -20,6 +20,7 @@
     <script src="js/passwordSame.js"></script>
     <link href="new-css/login.css" rel="stylesheet">
     <link href="new-css/registersAll.css" rel="stylesheet">
+    <link href="new-css/viewsDates.css" rel="stylesheet">
 </head>
 
 <body>
