@@ -12,8 +12,14 @@
     margin-left: -19px;
 }
 
-section {
+section{
     background-color: black;
+}
+
+.header-content {
+    margin-top: 200px;
+    margin-left: 260px;
+    position: absolute;
 }
 
 .header-video {
@@ -21,10 +27,8 @@ section {
 }
 
 .header-video video {
-    margin-top: -100px;
     min-width: 100vh;
     max-height: 116.1vh;
-    /**116.1*/
 }
 
 .containerFooter {
@@ -52,10 +56,29 @@ h2#titulo {
     padding: 25px;
 }
 
+.formulario {
+    color: black;
+    background: #fff;
+    border-radius: 15px;
+}
+
 h1 {
     text-align: center;
     font-size: 40px;
     color: #1a2537;
+}
+
+input[type="text"],
+input[type="password"] {
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+
+.input-contenedor {
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
 }
 
 .left {
@@ -105,6 +128,15 @@ p {
     color: #1a2537;
 }
 
+@media (min-width: 768px) {
+    .formulario {
+        margin: auto;
+        width: 420px;
+        margin: 215px 215px 0px;
+        margin-top: -45px;
+    }
+}
+
 @media (min-width: 1367px) {
     .header-content {
         margin-top: 210px;
@@ -135,12 +167,11 @@ section h2 {
     width: 33.333333%;
     background-color: black;
 }
-
-h2 {
+h2{
     text-align: center;
 }
 
-p {
+p{
     color: white;
 }
 
@@ -176,12 +207,16 @@ p {
 .estilo-a:hover .img-container img {
     transform: scale(1.2);
 }
+
 strong{
     color: white;
 }
 
 @media (min-width: 800px) {
-
+    .img-portada {
+        margin-left: 200px;
+        width: 1200px;
+    }
 }
 
 .capa{
@@ -193,7 +228,7 @@ strong{
     top: 0;left: 0;
 }
 
-.header{
+.sup{
     width: 100%;
     height: 100px;
     position: fixed;
@@ -291,147 +326,6 @@ strong{
     font-size: 18px;
 }
 
-strong {
-    color: white;
-}
-
-@media (min-width: 800px) {
-    .img-portada {
-        margin-left: 200px;
-        width: 1200px;
-    }
-}
-
-.capa {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-    top: 0;
-    left: 0;
-}
-
-.sup {
-    width: 100%;
-    height: 100px;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.container .btn-menu,
-.logo {
-    float: left;
-    line-height: 100px;
-}
-
-.container .btn-menu label {
-    color: #fff;
-    font-size: 25px;
-    cursor: pointer;
-}
-
-.logo h1 {
-    color: #fff;
-    font-weight: 400;
-    font-size: 22px;
-    margin-left: 10px;
-}
-
-.container .menu {
-    float: right;
-    line-height: 100px;
-}
-
-.container .menu a {
-    display: inline-block;
-    padding: 15px;
-    line-height: normal;
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
-    font-size: 15px;
-    margin-right: 5px;
-}
-
-.container .menu a:hover {
-    border-bottom: 2px solid #c7c7c7;
-    padding-bottom: 5px;
-}
-
-#btn-menu {
-    display: none;
-}
-
-.container-menu {
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    transition: all 500ms ease;
-    opacity: 0;
-    visibility: hidden;
-}
-
-#btn-menu:checked~.container-menu {
-    opacity: 1;
-    visibility: visible;
-}
-
-.cont-menu {
-    width: 100%;
-    max-width: 250px;
-    background: #1c1c1c;
-    height: 100vh;
-    position: relative;
-    transition: all 500ms ease;
-    transform: translateX(-100%);
-}
-
-#btn-menu:checked~.container-menu .cont-menu {
-    transform: translateX(0%);
-}
-
-.cont-menu nav {
-    transform: translateY(15%);
-}
-
-.cont-menu nav a {
-    display: block;
-    text-decoration: none;
-    padding: 20px;
-    color: #c7c7c7;
-    border-left: 5px solid transparent;
-    transition: all 400ms ease;
-}
-
-.cont-menu nav a:hover {
-    border-left: 5px solid #c7c7c7;
-    background: red;
-}
-
-.cont-menu label {
-    position: absolute;
-    right: 5px;
-    top: 10px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-.menu a:hover {
-    background: red;
-  
 .menu a:hover{
     background:red;
 }
