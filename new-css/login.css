@@ -384,7 +384,7 @@ strong {
 
 @media (min-width: 1800px) {
     .img-portada {
-        margin-right: 10%;
+        margin-right: 13%;
         margin-top: -100px;
         width: 100%;
     }
@@ -406,7 +406,7 @@ strong {
 
 @media (min-width: 1800px) {
     .vid-portada {
-        margin-right: 0%;
+        margin-right: 2%;
         margin-top: -100px;
         width: 100%;
     }
