@@ -358,3 +358,37 @@ strong {
     color: red;
     font-family: 'Comforter Brush', cursive;
 }
+
+@media (max-width: 1366px) {
+    .img-portada {
+        margin-left: -200px;
+        margin-top: -100px;
+        width: 100%;
+    }
+    .img img {
+        max-height: 95vh;
+    }
+}
+
+@media (max-width: 1800px) {
+    .img-portada {
+        margin-left: -200px;
+        margin-top: -100px;
+        width: 100%;
+    }
+    .img img {
+        max-height: 100vh;
+    }
+}
+
+@media (max-width: 1920px) {
+    .img-portada {
+        margin-left: -80px;
+        margin-top: -100px;
+        width: 100%;
+    }
+    .img img {
+        min-width: 110vh;
+        max-height: 115vh;
+    }
+}

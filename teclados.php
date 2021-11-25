@@ -1,5 +1,5 @@
 <?php
-$ubicacion = "inicio";
+$ubicacion = "Teclados";
 require("config/config.php");
 require("config/db.php");
 require("data/funciones.php");
