@@ -41,7 +41,7 @@
         </a>
     </div>
     <div class="card estilo-a">
-        <a href="<?php echo $BASE_ROOT_URL; ?>teclados.php">
+        <a href="<?php echo $BASE_ROOT_URL; ?>sillas.php">
             <div class="img-container">
                 <img src="https://redragon.es/content/uploads/2021/05/C502-BR.png" alt="producto 1">
             </div>

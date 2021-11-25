@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .header {
     display: flex;
     color: #fff;
@@ -14,12 +15,6 @@
 
 section {
     background-color: black;
-}
-
-.header-content {
-    margin-top: 200px;
-    margin-left: 260px;
-    position: absolute;
 }
 
 .header-video {
@@ -219,6 +214,20 @@ strong {
         margin-left: 200px;
         width: 1200px;
     }
+    .header-content {
+        margin-top: 70vh;
+        margin-left: 50px;
+        position: absolute;
+    }
+    .header-content h1 {
+        color: white;
+        font-size: 70px;
+    }
+    .h1Dos {
+        color: white;
+        margin-left: 60px;
+        font-size: 70px;
+    }
 }
 
 .capa {
@@ -238,6 +247,7 @@ strong {
     top: 0;
     left: 0;
     z-index: 1;
+    margin-left: 80px;
 }
 
 .container {
@@ -248,7 +258,9 @@ strong {
 
 .container .btn-menu,
 .logo {
+    color: #fff;
     float: left;
+    margin-left: -100px;
     line-height: 100px;
 }
 
@@ -361,7 +373,7 @@ strong {
 
 @media (max-width: 1366px) {
     .img-portada {
-        margin-left: -200px;
+        margin-right: 29.3%;
         margin-top: -100px;
         width: 100%;
     }
@@ -370,7 +382,7 @@ strong {
     }
 }
 
-@media (max-width: 1800px) {
+@media (min-width: 1800px) {
     .img-portada {
         margin-left: -200px;
         margin-top: -100px;
@@ -381,14 +393,13 @@ strong {
     }
 }
 
-@media (max-width: 1920px) {
-    .img-portada {
-        margin-left: -80px;
+@media (max-width: 1366px) {
+    .vid-portada {
         margin-top: -100px;
+        margin-right: 85%;
         width: 100%;
     }
     .img img {
-        min-width: 110vh;
-        max-height: 115vh;
+        max-height: 100vh;
     }
 }
