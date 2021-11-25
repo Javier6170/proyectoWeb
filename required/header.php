@@ -12,13 +12,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2a261ef767.js" crossorigin="anonymous"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="js/passwordSame.js"></script>
     <link href="new-css/login.css" rel="stylesheet">
     <link href="new-css/registersAll.css" rel="stylesheet">
     <link href="new-css/viewsDates.css" rel="stylesheet">
-    
+
 </head>
 
 <body>
