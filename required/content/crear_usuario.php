@@ -4,7 +4,7 @@
       <h3>Registrase</h3>
     </div>
     <div class="form-register">
-      <form method="post" onsubmit="return validar_contraseñas()" action="<?php echo $BASE_ROOT_URL; ?>guardar_productos.php">
+      <form method="post" onsubmit="return validar_contraseñas()" action="<?php echo $BASE_ROOT_URL; ?>guardar_usuarios.php">
         <div class="mb-3">
           <label for="nombre" class="form-label">Nombre</label>
           <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Ingresa tu nombre">
