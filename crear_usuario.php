@@ -1,7 +1,7 @@
 <?php 
 error_reporting(E_ALL ^ E_NOTICE);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$ubicacion = "Nuevo_Usuario";
+$ubicacion = "Nuevo Usuario";
 require("config/config.php");
 require("config/db.php");
 require("data/funciones.php");
