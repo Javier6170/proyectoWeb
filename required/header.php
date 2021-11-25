@@ -14,11 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2a261ef767.js" crossorigin="anonymous"></script>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script>
-        const BASE_ROOT_URL = "<?php echo $BASE_ROOT_URL ?>";
-    </script>
     <script src="js/passwordSame.js"></script>
-
     <link href="new-css/login.css" rel="stylesheet">
     <link href="new-css/registersAll.css" rel="stylesheet">
     <link href="new-css/viewsDates.css" rel="stylesheet">
