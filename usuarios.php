@@ -39,7 +39,7 @@ if(isset($_GET['mensaje_update'])) {
 if(isset($_GET['error'])) {
     ?>
         <script>
-            alert("Error al crear al producto!");
+            alert("Error al crear al usuario!");
         </script>
     
     <?php

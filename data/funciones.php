@@ -385,7 +385,8 @@
             */
             $stmt->execute();    
             $result = TRUE;
-        } else{
+        }
+         else{
             $result = FALSE;
         }
         
