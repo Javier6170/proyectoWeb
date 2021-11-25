@@ -11,7 +11,7 @@
             <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Productos</a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Comunidad</a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Centro Ayuda</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Inicio de Sesion</a>
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>inicio_sesion.php">Inicio de Sesion</a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_usuario.php">Registrarse</a>
         </nav>
 		</div>
