@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .header {
     display: flex;
     color: #fff;
@@ -15,6 +14,21 @@
 
 section {
     background-color: black;
+}
+
+.header-content {
+    margin-top: 70vh;
+    margin-left: 50px;
+    position: absolute;
+}
+
+.header-content h1 {
+    color: white;
+    font-size: 70px;
+}
+
+.h1Dos {
+    margin-left: 60px;
 }
 
 .header-video {
@@ -214,20 +228,6 @@ strong {
         margin-left: 200px;
         width: 1200px;
     }
-    .header-content {
-        margin-top: 70vh;
-        margin-left: 50px;
-        position: absolute;
-    }
-    .header-content h1 {
-        color: white;
-        font-size: 70px;
-    }
-    .h1Dos {
-        color: white;
-        margin-left: 60px;
-        font-size: 70px;
-    }
 }
 
 .capa {
@@ -258,10 +258,10 @@ strong {
 
 .container .btn-menu,
 .logo {
-    color: #fff;
     float: left;
     margin-left: -100px;
     line-height: 100px;
+    color: #fff;
 }
 
 .container .btn-menu label {
@@ -373,7 +373,7 @@ strong {
 
 @media (max-width: 1366px) {
     .img-portada {
-        margin-right: 29.3%;
+        margin-right: 18.5%;
         margin-top: -100px;
         width: 100%;
     }
@@ -384,7 +384,7 @@ strong {
 
 @media (min-width: 1800px) {
     .img-portada {
-        margin-left: -200px;
+        margin-right: 10%;
         margin-top: -100px;
         width: 100%;
     }
@@ -395,11 +395,44 @@ strong {
 
 @media (max-width: 1366px) {
     .vid-portada {
-        margin-top: -100px;
         margin-right: 85%;
+        margin-top: -100px;
+        width: 100%;
+    }
+    .img img {
+        max-height: 95vh;
+    }
+}
+
+@media (min-width: 1800px) {
+    .vid-portada {
+        margin-right: 0%;
+        margin-top: -100px;
         width: 100%;
     }
     .img img {
         max-height: 100vh;
+    }
+}
+
+@media (min-width: 1800px) {
+    .header-content {
+        margin-top: 70vh;
+        margin-left: 50px;
+        position: absolute;
+    }
+    .header-content h1 {
+        color: white;
+        font-size: 70px;
+    }
+    .h1Dos {
+        margin-left: 60px;
+    }
+    .container .btn-menu,
+    .logo {
+        float: left;
+        margin-left: -300px;
+        line-height: 100px;
+        color: #fff;
     }
 }
