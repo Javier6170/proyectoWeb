@@ -18,6 +18,7 @@
 			<?php
 			if (isset($_SESSION) && isset($_SESSION['correo'])) {
 			?>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>inicio_sesion.php">Perfil</a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>logout.php">Cerrar Sesion</a>
 			<?php
 			} else {
@@ -30,14 +31,16 @@
 		</nav>
 	</div>
 </header>
-<?php if (isset($_SESSION) && isset($_SESSION['correo'])) {
-?>
+
 	<div class="capa"></div>
 
 	<input type="checkbox" id="btn-menu">
 	<div class="container-menu">
 		<div class="cont-menu">
 			<nav>
+			<?php if (isset($_SESSION) && isset($_SESSION['correo'])) {
+				if($_SESSION['rol_nombre']=='Admin'){
+			?>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php">Ver Usuario</a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php">Crear Rol </a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>rol.php">Ver Rol</a>
@@ -48,8 +51,10 @@
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>productos.php">Ver Productos</a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_imagen.php"></i>Crear Imagen de productos</a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>imagenes_productos.php"></i>Ver url de imagenes</a>
+			<?php }else{ ?>
+				<a class="nav-link active" aria-current="page" href="">Editar Perfil</a>
+				<?php }} ?>
 			</nav>
 			<label for="btn-menu">✖️</label>
 		</div>
 	</div>
-<?php } ?>
