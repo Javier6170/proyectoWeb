@@ -686,6 +686,7 @@ function obtener_permisos_rol($conn, $rol_id){
         return $permisos;
     }
 
+
     function validar_usuario($conn,$correo,$contrasena) {
         $conn = validar_conexion($conn);
         $contrasena = hash('sha256',$contrasena);
@@ -710,7 +711,7 @@ function obtener_permisos_rol($conn, $rol_id){
                 $datosUsuario["apellido"] = $row["apellido"];
                 $datosUsuario["correo"] = $row["correo"];
                 $datosUsuario["rol_id"] = $row["rol_id"];
-                $datosUsuario["nombre_rol"] = $row["nombre_rol"];
+                $datosUsuario["rol_nombre"] = $row["rol_nombre"];
                 $datosUsuario["permisos"] = obtener_permisos_rol($conn,$row["rol_id"]);
             } else {
                 $datosUsuario = NULL;

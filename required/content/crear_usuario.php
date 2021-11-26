@@ -29,11 +29,8 @@
           <label for="rol" class="form-label">Rol</label>
           <select name="rol_id" id="rol_id">
             <?php foreach ($roles as $r) { ?>
-              <?php if ($r["nombre_rol"]=="user"){
-
-              ?>
               <option value="<?php echo $r["id"]; ?>"><?php echo $r["nombre_rol"]; ?></option>
-            <?php } }?>
+            <?php } ?>
           </select>
         </div>
         <button type="submit" class="btn btn-danger">Registrarse</button>
