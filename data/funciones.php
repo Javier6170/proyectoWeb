@@ -650,3 +650,74 @@ function obtener_listado_url_imagen($conn)
 
     return $categorias;
 }
+
+function obtener_permisos_rol($conn, $rol_id){
+        
+        $conn = validar_conexion($conn);
+        //$conn = $GLOBALS['conn'];    
+
+        $permisos = NULL;
+        $sql = "SELECT P.* FROM permisos P INNER JOIN rol_permisos RP ON RP.permiso_id = P.id ".
+                "WHERE RP.rol_id = ?";
+
+        if($stmt = $conn->prepare($sql)) {
+
+            $stmt->bind_param("i", $rol_id);
+            $stmt->execute();
+            $stmt_result = $stmt->get_result();
+
+            if ($stmt_result->num_rows > 0) {
+                $permisos = [];
+                
+                $i = 0;
+                while($row = $stmt_result->fetch_assoc()) {
+                    $permisos['nombre'][$i] = $row["nombre"];
+                    $permisos['script'][$i] = $row["script"];
+                    $permisos['id'][$i] = $row["id"];
+                    $i++;
+                }
+            } else {
+                $permisos = NULL;
+            }
+        }
+
+        $stmt->close();
+        //$conn->close();
+        return $permisos;
+    }
+
+    function validar_usuario($conn,$correo,$contrasena) {
+        $conn = validar_conexion($conn);
+        $contrasena = hash('sha256',$contrasena);
+        $datosUsuario = NULL;
+        $sql = "SELECT U.*, R.nombre_rol AS rol_nombre FROM usuario U ".
+                "INNER JOIN rol R ON U.rol_id = R.id ".
+                "WHERE (correo=? AND contrasena=?)";
+
+        if($stmt = $conn->prepare($sql)) {
+            /*echo '$stmt = $conn->prepare($sql)<br>';
+            echo $usuario.'<br>';
+            echo $contrasena.'<br>';*/
+            $stmt->bind_param("ss", $correo, $contrasena);
+            $stmt->execute();
+            $stmt_result = $stmt->get_result();
+            if ($stmt_result->num_rows > 0) {
+                //echo '$stmt_result->num_rows > 0<br>';
+                $datosUsuario = [];
+                $row = $stmt_result->fetch_assoc();
+                $datosUsuario["id"] = $row["id"];
+                $datosUsuario["nombre"] = $row["nombre"];
+                $datosUsuario["apellido"] = $row["apellido"];
+                $datosUsuario["correo"] = $row["correo"];
+                $datosUsuario["rol_id"] = $row["rol_id"];
+                $datosUsuario["nombre_rol"] = $row["nombre_rol"];
+                $datosUsuario["permisos"] = obtener_permisos_rol($conn,$row["rol_id"]);
+            } else {
+                $datosUsuario = NULL;
+            }
+        }
+
+        $stmt->close();
+        //$conn->close();
+        return $datosUsuario;
+    }
