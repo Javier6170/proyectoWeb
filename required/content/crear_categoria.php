@@ -1,7 +1,7 @@
 <center>
 <div class="container-admin">
 <div class="register-title">
-<h3>Crear Nuevo Producto</h3>
+<h3>Crear Nueva categoria</h3>
 </div>
 <div class="form-register">
 <form method="post" action="<?php echo $BASE_ROOT_URL; ?>guardar_categoria.php">
