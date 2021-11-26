@@ -14,11 +14,16 @@ $productos = obtener_listado_productos_con_category($conn);
         <div class="card estilo-a">
             <a href="#">
                 <div class="img-container">
-                    <img src=<?php echo strval($p['url_imagen']); ?> alt="producto 1">
+                    <img src=<?php echo strval($p['url_imagen']); ?> alt="producto 1">   
                 </div>
                 <p><?php echo $p['nombre'] ?></p>
                 <p><?php echo $p['precio'] ?> COP</p>
             </a>
+            <form action="" method="POST" class="f">
+            <center>
+            <button type="submit" class="car"><i class="fas fa-cart-plus"i></i>  Comprar</button>
+            </center>
+            </form>
         </div>
     <?php
     }}
