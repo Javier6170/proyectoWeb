@@ -1,5 +1,5 @@
 <?php 
-$ubicacion = "Lista productos | Store dark";
+$ubicacion = "Lista Usuarios | Store dark";
 require("config/config.php");
 require("config/db.php");
 require("data/funciones.php");
@@ -13,7 +13,7 @@ require("required/menu/main-menu.php");
 if(isset($_GET['mensaje'])) {
 ?>
     <script>
-        alert("Exito creando el producto!");
+        alert("Exito creando el url de la imagen!");
     </script>
 <?php
 }
@@ -21,7 +21,7 @@ if(isset($_GET['mensaje'])) {
 if(isset($_GET['mensaje_eliminar'])) {
     ?>
         <script>
-            alert("Exito eliminando el producto!");
+            alert("Exito eliminando el url de la imagen!");
         </script>
     
     <?php
@@ -30,7 +30,7 @@ if(isset($_GET['mensaje_eliminar'])) {
 if(isset($_GET['mensaje_update'])) {
     ?>
         <script>
-            alert("Exito actualizando el producto!");
+            alert("Exito actualizando el url de la imagen!");
         </script>
     
     <?php
@@ -39,15 +39,14 @@ if(isset($_GET['mensaje_update'])) {
 if(isset($_GET['error'])) {
     ?>
         <script>
-            alert("Error al crear al producto!");
+            alert("Error al crear al url de la imagen!");
         </script>
     
     <?php
     }
 
-require("required/content/productos.php");
+require("required/content/imagenes_productos.php");
 require("required/footer.php");
 // require("required/content/pages.php");
 // require("required/message/msj-one.php");
 ?>
-

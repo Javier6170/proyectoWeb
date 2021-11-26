@@ -8,8 +8,8 @@
     require($BASE_ROOT_FOLDER."data/funciones.php");
     //var_dump($_POST);
 
-    $resultado = crear_producto($conn, $_POST['nombre'],$_POST['precio'],$_POST['stock'],$_POST['descripcion'],$_POST['url_imagen'],$_POST['id_category']);
+    $resultado = crear_imagen_producto($conn, $_POST['url_imagen']);
 
     if ($resultado) {
-        header('Location:'.$BASE_ROOT_URL."productos.php?mensaje_update=Exito");
+        header('Location:'.$BASE_ROOT_URL."imagenes_productos.php?mensaje_update=Exito");
     }

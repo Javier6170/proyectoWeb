@@ -14,6 +14,7 @@ $productos = obtener_listado_productos_con_category($conn); ?>
             <th scope="col">Precio</th>
             <th scope="col">Stock</th>
             <th scope="col">Descripcion</th>
+            <th scope="col">Url Imagen</th>
             <th scope="col">Categoria</th>
             <th scopre="col" colspan="2">Acciones</th>
         </tr>
@@ -53,6 +54,12 @@ $productos = obtener_listado_productos_con_category($conn); ?>
                     <?php
                     echo $p["descripcion"]
                     ?>
+
+                </td>
+                <td>
+                    <?php
+                    echo $p["url_imagen"]
+                    ?>
                 </td>
                 <td>
                     <?php
@@ -66,7 +73,6 @@ $productos = obtener_listado_productos_con_category($conn); ?>
                 </td>
                 <td> <a class="btns" href="#" onClick="eliminar_productos(<?php echo $p["id"] ?>);">Eliminar</a></td>
             </tr>
-
         <?php
         }
         ?>
