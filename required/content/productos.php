@@ -71,7 +71,7 @@ $productos = obtener_listado_productos_con_category($conn); ?>
                 <a class="btns" href="<?php echo $BASE_ROOT_URL; ?>actualizar_producto.php?id=<?php echo $p["id"]; ?>">Actualizar
                 </a>
                 </td>
-                <td> <a class="btns" href="#" onClick="eliminar_productos(<?php echo $p["id"] ?>);">Eliminar</a></td>
+                <td> <a class="btns" href="#" onClick="eliminar_producto(<?php echo $p["id"] ?>);">Eliminar</a></td>
             </tr>
         <?php
         }
