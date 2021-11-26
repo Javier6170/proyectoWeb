@@ -657,7 +657,7 @@ function obtener_permisos_rol($conn, $rol_id){
         //$conn = $GLOBALS['conn'];    
 
         $permisos = NULL;
-        $sql = "SELECT P.* FROM permisos P INNER JOIN rol_permisos RP ON RP.permiso_id = P.id ".
+        $sql = "SELECT P.* FROM permisos P INNER JOIN rol_permisos RP ON RP.permisos_id = P.id ".
                 "WHERE RP.rol_id = ?";
 
         if($stmt = $conn->prepare($sql)) {

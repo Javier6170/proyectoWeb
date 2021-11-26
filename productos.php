@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $ubicacion = "Lista productos | Store dark";
 require("config/config.php");
 require("config/db.php");

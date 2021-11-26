@@ -1,4 +1,5 @@
 <?php
+session_start();
 $ubicacion = "Teclados";
 require("config/config.php");
 require("config/db.php");
