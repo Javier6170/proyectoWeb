@@ -1,38 +1,55 @@
 <header class="sup">
-		<div class="container">
+	<div class="container">
 		<div class="btn-menu">
 
 		</div>
+		<?php if (isset($_SESSION) && isset($_SESSION['correo'])) {
+		?>
 			<div class="logo">
-                <label for="btn-menu">☰</label>
+				<label for="btn-menu">☰</label>
 			</div>
-			<nav class="menu">
-            <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Store Dark</a>
-            <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Productos</a>
+		<?php } ?>
+		<nav class="menu">
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Store Dark</a>
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Productos</a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Comunidad</a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Centro Ayuda</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>inicio_sesion.php">Inicio de Sesion</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_usuario.php">Registrarse</a>
-        </nav>
-		</div>
+
+			<?php
+			if (isset($_SESSION) && isset($_SESSION['correo'])) {
+			?>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>logout.php">Cerrar Sesion</a>
+			<?php
+			} else {
+			?>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>inicio_sesion.php">Inicio de Sesion</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_usuario.php">Registrarse</a>
+			<?php
+			}
+			?>
+		</nav>
+	</div>
 </header>
+<?php if (isset($_SESSION) && isset($_SESSION['correo'])) {
+?>
 	<div class="capa"></div>
 
-<input type="checkbox" id="btn-menu">
-<div class="container-menu">
-	<div class="cont-menu">
-		<nav class="navegacion">
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php">Ver Usuario</a>
-            <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php">Crear Rol </a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>rol.php">Ver Rol</a>
-            <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Video juegos</a>
-            <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_categoria.php"></i>Crear categoria</a>
-            <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>categoria.php">Ver categoria</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Producto</a>
-            <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>productos.php">Ver Productos</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_imagen.php"></i>Crear Imagen de productos</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>imagenes_productos.php"></i>Ver url de imagenes</a>
-		</nav>
-		<label for="btn-menu">✖️</label>
+	<input type="checkbox" id="btn-menu">
+	<div class="container-menu">
+		<div class="cont-menu">
+			<nav>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php">Ver Usuario</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php">Crear Rol </a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>rol.php">Ver Rol</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Video juegos</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_categoria.php"></i>Crear categoria</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>categoria.php">Ver categoria</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Producto</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>productos.php">Ver Productos</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_imagen.php"></i>Crear Imagen de productos</a>
+				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>imagenes_productos.php"></i>Ver url de imagenes</a>
+			</nav>
+			<label for="btn-menu">✖️</label>
+		</div>
 	</div>
-</div>
+<?php } ?>
