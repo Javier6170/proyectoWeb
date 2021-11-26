@@ -28,6 +28,10 @@
             <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Video juegos</a>
             <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_categoria.php"></i>Crear categoria</a>
             <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>categoria.php">Ver categoria</a>
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Producto</a>
+            <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>productos.php">Ver Productos</a>
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_imagen.php"></i>Crear Imagen de productos</a>
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>imagenes_productos.php"></i>Ver url de imagenes</a>
 		</nav>
 		<label for="btn-menu">✖️</label>
 	</div>
