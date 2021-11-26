@@ -21,7 +21,7 @@
 <input type="checkbox" id="btn-menu">
 <div class="container-menu">
 	<div class="cont-menu">
-		<nav>
+		<nav class="navegacion">
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php">Ver Usuario</a>
             <a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php">Crear Rol </a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>rol.php">Ver Rol</a>

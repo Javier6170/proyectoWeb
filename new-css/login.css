@@ -190,12 +190,13 @@ p {
 
 .estilo-a {
     font-family: sans-serif;
-    z-index: 3;
+    z-index: 7;
 }
 
 .estilo-a a {
     text-decoration: none;
     color: black;
+
 }
 
 .estilo-a a:hover {
@@ -315,6 +316,10 @@ strong {
     visibility: hidden;
 }
 
+.active{
+    padding-top: -20px;
+}
+
 #btn-menu:checked~.container-menu {
     opacity: 1;
     visibility: visible;
@@ -322,13 +327,13 @@ strong {
 
 .cont-menu {
     width: 100%;
-    max-width: 350px;
+    max-width: 400px;
     background: #1c1c1c;
-    height: 116.3vh;
+    height: 122.3vh;
     position: relative;
     transition: all 500ms ease;
-    transform: translateX(-100%);
-    z-index: 2;
+    transform: translateX(-150%);
+    z-index: 10;
 }
 
 #btn-menu:checked~.container-menu .cont-menu {
@@ -437,13 +442,14 @@ strong {
     }
 }
 
- .estilo-a  .estilo-b .img-container .favorite{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: white;
-    border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-  }
+ .estilo-a .f .car{
+     background-color: red;
+     color: white;
+     transition: all 0.5s;
+     padding: 20px;
+     border-radius: 15px;
+ }
+
+ .estilo-a .car:hover{
+    transform: scale(1.2);
+ }
