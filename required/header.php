@@ -22,11 +22,10 @@
     <link href="new-css/registerUser.css" rel="stylesheet">
     <link href="new-css/viewsDates.css" rel="stylesheet">
     <script src="js/funcionesUser.js"></script>
+    <script src="js/funciones_url_imagen.js"></script>
     <script src="js/funcionesRol.js"></script>
     <script src="js/passwordSame.js"></script>
-    <script src="js/funcionesRol.js"></script>
-    <script src="js/funcionesUser.js"></script>
-    <script src="js/passwordSame.js"></script>
+    <script src="js/funcionComboBox.js"></script>
 </head>
 
 <body>
