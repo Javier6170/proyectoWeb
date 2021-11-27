@@ -4,7 +4,7 @@ session_start();
 <center>
 <div class="container-admin">
 <div class="register-title">
-    <h3>Crear Nuevo rol</h3>
+    <h3>Actualizar Categoria</h3>
 </div>
 
 <form method="post" action="<?php echo $BASE_ROOT_URL; ?>guardar_cambios_categoria.php">
@@ -15,7 +15,7 @@ session_start();
         value="<?php echo $categoria['nombre']?>"
     >
 
-  <button  class="btns" type="submit" class="btn btn-primary">Actualizar Rol</button>
+  <button  class="btns" type="submit" class="btn btn-primary">Actualizar Categoria</button>
 </form>
 </div>
 </div>

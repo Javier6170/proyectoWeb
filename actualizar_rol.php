@@ -6,6 +6,7 @@ session_start();
     require($BASE_ROOT_FOLDER."config/config.php");
     require($BASE_ROOT_FOLDER."config/db.php");
     require($BASE_ROOT_FOLDER."data/funciones.php");    
+    require("config/security.php");
     $rol=obtener_roless($conn, $_GET['id']);
     //echo "<pre>".print_r($producto)."</pre>";
 

@@ -118,6 +118,15 @@ if (isset($_SESSION['carrito'])) {
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                             <a type="button" class="btn btn-primary" href="<?php echo $BASE_ROOT_URL; ?>borrarcarro.php">Vaciar carrito</a>
                         </center>
+                        <br>
+                        <center>
+                        <?php if (isset($_SESSION) && isset($_SESSION['correo'])) {
+                        ?>
+                            <button type="button" class="btn btn-secondary">Comprar</button>
+                        <?php }else{  ?>
+                            <h6 class="text-primary">!Debes iniciar Sesion primero para comprar¡ <a href="<?php echo $BASE_ROOT_URL; ?>inicio_sesion.php">Iniciar Sesion</a></h6>
+                        <?php } ?>
+                        </center>
                     </div>
                 </div>
             </div>

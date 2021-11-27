@@ -12,7 +12,7 @@ session_start();
         <label for="nombre" class="form-label">Nombre</label>
         <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="ingresa el nombre de la categoria">
     </div>
-    <button type="submit" class="btn btn-danger">Crear nuevo rol</button>
+    <button type="submit" class="btn btn-danger">Crear nueva Categria</button>
 </form>
 </div>
 </div>
