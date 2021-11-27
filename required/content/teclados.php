@@ -125,13 +125,11 @@ if (isset($_SESSION['carrito'])) {
                         <input name="precio" type="hidden" id="precio" value=<?php echo strval($p['precio']) ?> />
                         <input name="titulo" type="hidden" id="titulo" value=<?php echo $p["nombre"] ?> />
                         <input name="cantidad" type="hidden" id="cantidad" value=<?php echo strval($p['stock']) ?> class="pl-2" />
-                        <p><?php echo $p['nombre']?></p>
-                        <p>$<?php echo $p['precio']?> COP</p>
-                        <p>Stock: <?php echo $p['stock']?></p>
+                        <p><?php echo $p['nombre'] ?></p>
+                        <p>$<?php echo $p['precio'] ?> COP</p>
+                        <p>Stock: <?php echo $p['stock'] ?></p>
                         <center><button class="car" type="submit"><i class="fas fa-shopping-cart"></i> Añadir al carrito</button></center>
                     </form>
-
-
                 </a>
             </div>
     <?php
