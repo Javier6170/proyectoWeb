@@ -5,6 +5,7 @@ if ($_SESSION['rol_nombre'] == 'NULL') {
 	$menuRol = FALSE;
 	$menuCategoria = FALSE;
 	$menuImagenProducto = FALSE;
+	$menuactualizarPerfil = FALSE;
 
 	if (tiene_permiso_sesion('productos') || tiene_permiso_sesion('crear_producto'))
 		$menuProducto = TRUE;
@@ -20,6 +21,8 @@ if ($_SESSION['rol_nombre'] == 'NULL') {
 
 	if (tiene_permiso_sesion('crear_imagen') || tiene_permiso_sesion('imagenes_productos'))
 		$menuImagenProducto = TRUE;
+	if (tiene_permiso_sesion('actualizar_usuario_user'))
+		$menuactualizarPerfil = TRUE;
 }
 
 ?>
@@ -97,7 +100,9 @@ if ($_SESSION['rol_nombre'] == 'NULL') {
 						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>imagenes_productos.php"></i>Ver url de imagenes</a>
 					<?php } ?>
 				<?php } else { ?>
-					<a class="nav-link active" aria-current="page" href="">Editar Perfil</a>
+					<?php if (tiene_permiso_sesion('actualizar_usuario_user')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>actualizar_usuario_user.php">Editar Perfil</a>
+					<?php } ?>
 			<?php }
 			} ?>
 		</nav>

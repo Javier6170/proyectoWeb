@@ -6,6 +6,7 @@ session_start();
     require($BASE_ROOT_FOLDER."config/config.php");
     require($BASE_ROOT_FOLDER."config/db.php");
     require($BASE_ROOT_FOLDER."data/funciones.php");    
+    require("config/security.php");
     $producto=obtener_producto($conn, $_GET['id']);
     //echo "<pre>".print_r($producto)."</pre>";
 

@@ -4,7 +4,7 @@ session_start();
 <center>
 <div class="container-admin">
 <div class="register-title">
-    <h3>Crear Nuevo rol</h3>
+    <h3>Actualizar Rol</h3>
 </div>
 <div class="form-register">
 <form method="post" action="<?php echo $BASE_ROOT_URL; ?>guardar_cambios_rol.php">
