@@ -698,9 +698,6 @@ function validar_usuario($conn, $correo, $contrasena)
         "WHERE (correo=? AND contrasena=?)";
 
     if ($stmt = $conn->prepare($sql)) {
-        /*echo '$stmt = $conn->prepare($sql)<br>';
-            echo $usuario.'<br>';
-            echo $contrasena.'<br>';*/
         $stmt->bind_param("ss", $correo, $contrasena);
         $stmt->execute();
         $stmt_result = $stmt->get_result();
@@ -725,3 +722,59 @@ function validar_usuario($conn, $correo, $contrasena)
     return $datosUsuario;
 }
 
+function tiene_permiso($conn, $usuario_id, $permiso)
+{
+    $conn = validar_conexion($conn);
+
+    $sql = "SELECT P.* FROM permisos P INNER JOIN rol_permisos RP ON RP.permiso_id = P.id 
+    INNER JOIN rol R on RP.rol_id = R.id INNER JOIN usuarios U ON R.id = U.rol_id 
+    WHERE U.id = ? AND P.nombre = ?";
+
+    if ($stmt = $conn->prepare($sql)) {
+
+        $stmt->bind_param("is", $usuario_id, $permiso);
+        $stmt->execute();
+        $stmt_result = $stmt->get_result();
+
+        if ($stmt_result->num_rows > 0) {
+            $stmt->close();
+            return TRUE;
+        }
+        return FALSE;
+    }
+}
+
+function tiene_permiso_sesion($permiso)
+{
+    session_start();
+    return in_array($permiso, $_SESSION['permisos']["nombre"]);
+}
+
+function puede_ejecutar_script($conn, $usuario_id, $script)
+{
+    $conn = validar_conexion($conn);
+
+    $sql = "SELECT P.* FROM permisos P INNER JOIN rol_permisos RP ON RP.permiso_id = P.id 
+    INNER JOIN rol R on RP.rol_id = R.id INNER JOIN usuarios U ON R.id = U.rol_id 
+    WHERE U.id = ? AND P.script = ?";
+
+    if ($stmt = $conn->prepare($sql)) {
+
+        $stmt->bind_param("is", $usuario_id, $script);
+        $stmt->execute();
+        $stmt_result = $stmt->get_result();
+
+        if ($stmt_result->num_rows > 0) {
+            $stmt->close();
+            return TRUE;
+        }
+
+        return FALSE;
+    }
+}
+
+function puede_ejecutar_script_sesion($script)
+{
+    session_start();
+    return in_array($script, $_SESSION['permisos']["script"]);
+}

@@ -1,8 +1,17 @@
 <?php
 session_start();
+
 ?>
 <?php
-$usuarios = obtener_listado_url_productos($conn); ?>
+$usuarios = obtener_listado_url_productos($conn); 
+$columnasAcciones = 0;
+
+if (tiene_permiso_sesion('actualizar-producto'))
+    $columnasAcciones++;
+
+if (tiene_permiso_sesion('eliminar-producto'))
+    $columnasAcciones++;
+?>
 <div class="container-views">
     <div class="title-listado">
         <h3>Listado de Usuarios</h3>

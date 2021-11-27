@@ -1,3 +1,28 @@
+<?php
+if ($_SESSION['rol_nombre'] == 'NULL') {
+	$menuProducto = FALSE;
+	$menuUsuario = FALSE;
+	$menuRol = FALSE;
+	$menuCategoria = FALSE;
+	$menuImagenProducto = FALSE;
+
+	if (tiene_permiso_sesion('productos') || tiene_permiso_sesion('crear_producto'))
+		$menuProducto = TRUE;
+
+	if (tiene_permiso_sesion('usuarios') || tiene_permiso_sesion('crear_usuario'))
+		$menuUsuario = TRUE;
+
+	if (tiene_permiso_sesion('rol') || tiene_permiso_sesion('crear_rol'))
+		$menuRol = TRUE;
+
+	if (tiene_permiso_sesion('categoria') || tiene_permiso_sesion('crear_categoria'))
+		$menuCategoria = TRUE;
+
+	if (tiene_permiso_sesion('crear_imagen') || tiene_permiso_sesion('imagenes_productos'))
+		$menuImagenProducto = TRUE;
+}
+
+?>
 <header class="sup">
 	<div class="container">
 		<div class="btn-menu">
@@ -32,28 +57,50 @@
 	</div>
 </header>
 
-	<div class="capa"></div>
+<div class="capa"></div>
 
-	<input type="checkbox" id="btn-menu">
-	<div class="container-menu">
-		<div class="cont-menu">
-			<nav>
+<input type="checkbox" id="btn-menu">
+<div class="container-menu">
+	<div class="cont-menu">
+		<nav>
 			<?php if (isset($_SESSION) && isset($_SESSION['correo'])) {
-				if($_SESSION['rol_nombre']=='Admin'){
+				if ($_SESSION['rol_nombre'] == 'Admin') {
 			?>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php">Ver Usuario</a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php">Crear Rol </a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>rol.php">Ver Rol</a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_categoria.php"></i>Crear categoria</a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>categoria.php">Ver categoria</a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Producto</a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>productos.php">Ver Productos</a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_imagen.php"></i>Crear Imagen de productos</a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>imagenes_productos.php"></i>Ver url de imagenes</a>
-			<?php }else{ ?>
-				<a class="nav-link active" aria-current="page" href="">Editar Perfil</a>
-				<?php }} ?>
-			</nav>
-			<label for="btn-menu">✖️</label>
-		</div>
+					<?php if (tiene_permiso_sesion('crear_usuario')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_usuario.php">Crear Usuario</a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('productos')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php">Ver Usuario</a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('crear_rol')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php">Crear Rol </a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('rol')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>rol.php">Ver Rol</a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('crear_categoria')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_categoria.php"></i>Crear categoria</a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('categoria')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>categoria.php">Ver categoria</a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('crear_producto')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Producto</a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('productos')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>productos.php">Ver Productos</a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('crear_imagen')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_imagen.php"></i>Crear Imagen de productos</a>
+					<?php } ?>
+					<?php if (tiene_permiso_sesion('imagenes_productos')) { ?>
+						<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>imagenes_productos.php"></i>Ver url de imagenes</a>
+					<?php } ?>
+				<?php } else { ?>
+					<a class="nav-link active" aria-current="page" href="">Editar Perfil</a>
+			<?php }
+			} ?>
+		</nav>
+		<label for="btn-menu">✖️</label>
 	</div>
+</div>

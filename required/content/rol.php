@@ -1,5 +1,14 @@
 <?php
-$roles=obtener_listado_roles($conn);?>
+session_start();
+$roles=obtener_listado_roles($conn);
+$columnasAcciones = 0;
+
+if (tiene_permiso_sesion('actualizar-producto'))
+    $columnasAcciones++;
+
+if (tiene_permiso_sesion('eliminar-producto'))
+    $columnasAcciones++;
+?>
 <div class="container-views">
     <div class="title-listado">
         <h3>Listado de roles</h3>

@@ -11,5 +11,14 @@
     $resultado = crear_producto($conn, $_POST['nombre'],$_POST['precio'],$_POST['stock'],$_POST['descripcion'],$_POST['url_imagen'],$_POST['id_category']);
 
     if ($resultado) {
-        header('Location:'.$BASE_ROOT_URL."productos.php?mensaje_update=Exito");
+        session_start();
+        $_SESSION['mensaje']['exito'] = TRUE;
+        $_SESSION['mensaje']['mensaje'] = "Producto creado de forma exitosa!";
+        
+    } else {
+        session_start();
+        $_SESSION['mensaje']['error'] = TRUE;
+        $_SESSION['mensaje']['mensaje'] = "Ocurrió un error al tratar de crear un nuevo Producto. Verifique los datos e intente nuevamente!";
     }
+
+        header('Location:'.$BASE_ROOT_URL."productos.php?mensaje_update=Exito");

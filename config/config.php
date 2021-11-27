@@ -7,4 +7,6 @@
     $DB_NAME="proyecto-web";
     $DB_USERNAME="root";
     $DB_PASSWORD="";
+    $PAGINAS_DESPROTEGIDAS = "index.php|logout.php|non-permission.php";
+    session_start();
 ?>
