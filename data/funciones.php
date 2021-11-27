@@ -151,7 +151,7 @@ function eliminar_usuario($conn, $id)
     //$conn->close();
     return $result;
 }
-function crear_producto($conn, $nombre, $precio, $stock, $descripcion,$url_imagen, $id_category)
+function crear_producto($conn, $nombre, $precio, $stock, $descripcion, $url_imagen, $id_category)
 {
 
     $conn = validar_conexion($conn);
@@ -205,7 +205,7 @@ function obtener_producto($conn, $id)
 function actualizar_producto($conn, $nombre, $precio, $stock, $descripcion, $id)
 {
     $conn = validar_conexion($conn);
-    $sql = "UPDATE producto SET nombre=?, apellido=?,stock=?,descripcion=?  WHERE id=?";
+    $sql = "UPDATE producto SET nombre=?,precio=?,stock=?,descripcion=?  WHERE id=?";
     //die($sql);
 
     if ($stmt = $conn->prepare($sql)) {
@@ -651,74 +651,77 @@ function obtener_listado_url_imagen($conn)
     return $categorias;
 }
 
-function obtener_permisos_rol($conn, $rol_id){
-        
-        $conn = validar_conexion($conn);
-        //$conn = $GLOBALS['conn'];    
+function obtener_permisos_rol($conn, $rol_id)
+{
 
-        $permisos = NULL;
-        $sql = "SELECT P.* FROM permisos P INNER JOIN rol_permisos RP ON RP.permisos_id = P.id ".
-                "WHERE RP.rol_id = ?";
+    $conn = validar_conexion($conn);
+    //$conn = $GLOBALS['conn'];    
 
-        if($stmt = $conn->prepare($sql)) {
+    $permisos = NULL;
+    $sql = "SELECT P.* FROM permisos P INNER JOIN rol_permisos RP ON RP.permisos_id = P.id " .
+        "WHERE RP.rol_id = ?";
 
-            $stmt->bind_param("i", $rol_id);
-            $stmt->execute();
-            $stmt_result = $stmt->get_result();
+    if ($stmt = $conn->prepare($sql)) {
 
-            if ($stmt_result->num_rows > 0) {
-                $permisos = [];
-                
-                $i = 0;
-                while($row = $stmt_result->fetch_assoc()) {
-                    $permisos['nombre'][$i] = $row["nombre"];
-                    $permisos['script'][$i] = $row["script"];
-                    $permisos['id'][$i] = $row["id"];
-                    $i++;
-                }
-            } else {
-                $permisos = NULL;
+        $stmt->bind_param("i", $rol_id);
+        $stmt->execute();
+        $stmt_result = $stmt->get_result();
+
+        if ($stmt_result->num_rows > 0) {
+            $permisos = [];
+
+            $i = 0;
+            while ($row = $stmt_result->fetch_assoc()) {
+                $permisos['nombre'][$i] = $row["nombre"];
+                $permisos['script'][$i] = $row["script"];
+                $permisos['id'][$i] = $row["id"];
+                $i++;
             }
+        } else {
+            $permisos = NULL;
         }
-
-        $stmt->close();
-        //$conn->close();
-        return $permisos;
     }
 
+    $stmt->close();
+    //$conn->close();
+    return $permisos;
+}
 
-    function validar_usuario($conn,$correo,$contrasena) {
-        $conn = validar_conexion($conn);
-        $contrasena = hash('sha256',$contrasena);
-        $datosUsuario = NULL;
-        $sql = "SELECT U.*, R.nombre_rol AS rol_nombre FROM usuario U ".
-                "INNER JOIN rol R ON U.rol_id = R.id ".
-                "WHERE (correo=? AND contrasena=?)";
 
-        if($stmt = $conn->prepare($sql)) {
-            /*echo '$stmt = $conn->prepare($sql)<br>';
+function validar_usuario($conn, $correo, $contrasena)
+{
+    $conn = validar_conexion($conn);
+    $contrasena = hash('sha256', $contrasena);
+    $datosUsuario = NULL;
+    $sql = "SELECT U.*, R.nombre_rol AS rol_nombre FROM usuario U " .
+        "INNER JOIN rol R ON U.rol_id = R.id " .
+        "WHERE (correo=? AND contrasena=?)";
+
+    if ($stmt = $conn->prepare($sql)) {
+        /*echo '$stmt = $conn->prepare($sql)<br>';
             echo $usuario.'<br>';
             echo $contrasena.'<br>';*/
-            $stmt->bind_param("ss", $correo, $contrasena);
-            $stmt->execute();
-            $stmt_result = $stmt->get_result();
-            if ($stmt_result->num_rows > 0) {
-                //echo '$stmt_result->num_rows > 0<br>';
-                $datosUsuario = [];
-                $row = $stmt_result->fetch_assoc();
-                $datosUsuario["id"] = $row["id"];
-                $datosUsuario["nombre"] = $row["nombre"];
-                $datosUsuario["apellido"] = $row["apellido"];
-                $datosUsuario["correo"] = $row["correo"];
-                $datosUsuario["rol_id"] = $row["rol_id"];
-                $datosUsuario["rol_nombre"] = $row["rol_nombre"];
-                $datosUsuario["permisos"] = obtener_permisos_rol($conn,$row["rol_id"]);
-            } else {
-                $datosUsuario = NULL;
-            }
+        $stmt->bind_param("ss", $correo, $contrasena);
+        $stmt->execute();
+        $stmt_result = $stmt->get_result();
+        if ($stmt_result->num_rows > 0) {
+            //echo '$stmt_result->num_rows > 0<br>';
+            $datosUsuario = [];
+            $row = $stmt_result->fetch_assoc();
+            $datosUsuario["id"] = $row["id"];
+            $datosUsuario["nombre"] = $row["nombre"];
+            $datosUsuario["apellido"] = $row["apellido"];
+            $datosUsuario["correo"] = $row["correo"];
+            $datosUsuario["rol_id"] = $row["rol_id"];
+            $datosUsuario["rol_nombre"] = $row["rol_nombre"];
+            $datosUsuario["permisos"] = obtener_permisos_rol($conn, $row["rol_id"]);
+        } else {
+            $datosUsuario = NULL;
         }
-
-        $stmt->close();
-        //$conn->close();
-        return $datosUsuario;
     }
+
+    $stmt->close();
+    //$conn->close();
+    return $datosUsuario;
+}
+
