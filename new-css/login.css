@@ -196,7 +196,6 @@ p {
 .estilo-a a {
     text-decoration: none;
     color: black;
-
 }
 
 .estilo-a a:hover {
@@ -316,7 +315,7 @@ strong {
     visibility: hidden;
 }
 
-.active{
+.active {
     padding-top: -20px;
 }
 
@@ -382,6 +381,11 @@ strong {
         margin-top: -100px;
         width: 100%;
     }
+    .container-comunidad {
+        margin-right: 7%;
+        margin-top: -30px;
+        width: 100%;
+    }
     .img img {
         max-height: 95vh;
     }
@@ -390,7 +394,12 @@ strong {
 @media (min-width: 1800px) {
     .img-portada {
         margin-right: 13%;
-        margin-top: -100px;
+        margin-top: -30px;
+        width: 100%;
+    }
+    .container-comunidad {
+        margin-right: 10%;
+        margin-top: -50px;
         width: 100%;
     }
     .img img {
@@ -442,14 +451,14 @@ strong {
     }
 }
 
- .estilo-a .car{
-     background-color: red;
-     color: white;
-     transition: all 0.5s;
-     padding: 20px;
-     border-radius: 15px;
- }
+.estilo-a .car {
+    background-color: red;
+    color: white;
+    transition: all 0.5s;
+    padding: 20px;
+    border-radius: 15px;
+}
 
- .estilo-a .car:hover{
+.estilo-a .car:hover {
     transform: scale(1.2);
- }
+}

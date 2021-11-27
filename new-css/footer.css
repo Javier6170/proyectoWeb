@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Lobster&family=Shadows+Into+Light&display=swap');
+.title-comunidad {
+    text-align: left;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: 'Comforter Brush', cursive;
+}
+
+.subtitle-comunidad {
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 85px;
+    color: white;
+    font-family: 'Comforter Brush', cursive;
+}
+
+.introduccion-comunidad {
+    margin-left: 200px;
+    margin-right: 100px;
+}
+
+.introduccion-comunidad p {
+    justify-content: center;
+}
+
+.info-car {
+    display: flex;
+}
+
+.info {
+    margin-top: -50px;
+    margin-left: 20px;
+}
+
+.info h1 {
+    color: white;
+    font-family: 'Comforter Brush', cursive;
+}
+
+
+/* css de quienes somos  */
+
+.info-qs {
+    margin-left: 20px;
+}
+
+.info-qs h3 {
+    color: white;
+    font-family: 'Comforter Brush', cursive;
+    font-family: 'Lobster', cursive;
+    font-family: 'Shadows Into Light', cursive;
+}
+
+.info-qs p {
+    color: gray;
+}
+
+.imagen-qs {
+    margin-left: 20px;
+}
+
+.imagen-qs img {
+    width: 500px;
+    height: 300px;
+}
+
+.video-qs {
+    margin-top: 50px;
+}
+
+.title-ca {
+    color: white;
+    font-family: 'Comforter Brush', cursive;
+    margin-top: -100px;
+    text-align: left;
+    margin-left: 80px;
+    font-size: 60px;
+}
+
+.card p {
+    color: white;
+    font-family: 'Comforter Brush', cursive;
+    font-size: 50px;
+}

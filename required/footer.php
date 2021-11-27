@@ -25,20 +25,16 @@
 
             <div class="col-6 left">
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Inicio</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Quienes Somos</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Producto</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Asesor</a></li>
+                    <li class="nav-item mb-2"><a href="<?php echo $BASE_ROOT_URL; ?>index.php" class="nav-link p-0 text-light">Inicio</a></li>
+                    <li class="nav-item mb-2"><a href="<?php echo $BASE_ROOT_URL; ?>quienes_somos.php" class="nav-link p-0 text-light">Quienes Somos</a></li>
                 </ul>
             </div>
 
 
             <div class="col-6 right">
                 <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Comunidad</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Centro de Ayuda</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Puntos de venta</a></li>
-                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Contacto</a></li>
+                    <li class="nav-item mb-2"><a href="<?php echo $BASE_ROOT_URL; ?>comunidad.php" class="nav-link p-0 text-light">Comunidad</a></li>
+                    <li class="nav-item mb-2"><a href="<?php echo $BASE_ROOT_URL; ?>centro_ayuda.php" class="nav-link p-0 text-light">Centro de Ayuda</a></li>
                 </ul>
             </div>
 
