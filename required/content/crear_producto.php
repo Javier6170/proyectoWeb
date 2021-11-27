@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <center>
   <div class="container-user">
     <div class="register-title">

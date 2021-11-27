@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 $usuarios = obtener_listado_usuarios_con_rol($conn); ?>
 <div class="container-views">
     <div class="title-listado">

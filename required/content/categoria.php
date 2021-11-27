@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 $categorias = obtener_listado_categorias($conn); ?>
 <div class="container-views">
     <div class="title-listado">

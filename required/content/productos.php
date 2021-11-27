@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 $productos = obtener_listado_productos_con_category($conn); ?>
 <div class="container-views">
     <div class="title-listado">
