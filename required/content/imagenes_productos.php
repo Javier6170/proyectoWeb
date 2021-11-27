@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 $usuarios = obtener_listado_url_productos($conn); ?>
 <div class="container-views">
     <div class="title-listado">

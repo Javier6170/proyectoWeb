@@ -11,10 +11,10 @@
 		<?php } ?>
 		<nav class="menu">
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Store Dark</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Productos</a>
+			<a class="nav-link active" aria-current="page" href="index.php#ventas">Productos</a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>comunidad.php">Comunidad</a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>centro_ayuda.php">Centro Ayuda</a>
-
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>quienes_somos.php">Quienes Somos</a>
 			<?php
 			if (isset($_SESSION) && isset($_SESSION['correo'])) {
 			?>
@@ -44,7 +44,6 @@
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>usuarios.php">Ver Usuario</a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_rol.php">Crear Rol </a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>rol.php">Ver Rol</a>
-				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Video juegos</a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_categoria.php"></i>Crear categoria</a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>categoria.php">Ver categoria</a>
 				<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>crear_producto.php"></i>Crear Producto</a>

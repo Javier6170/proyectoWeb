@@ -1,5 +1,5 @@
 <?php
-
+session_start();
     error_reporting(E_ALL ^ E_NOTICE);
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 

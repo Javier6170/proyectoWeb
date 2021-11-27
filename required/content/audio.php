@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 $productos = obtener_listado_productos_con_category($conn);
 ?>
 <section class="matriz-productos">

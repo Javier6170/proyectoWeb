@@ -39,9 +39,7 @@
             </div>
 
             <div class="d-flex justify-content-between py-4 my-4 border-top">
-                <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-                <ul class="list-unstyled d-flex">
-                </ul>
+                <p>&copy; 2021 dark Store</p>
             </div>
     </footer>
 </div>
@@ -51,5 +49,4 @@
     const BASE_ROOT_URL = "<?php echo $BASE_ROOT_URL ?>";
 </script>
 </body>
-
 </html>

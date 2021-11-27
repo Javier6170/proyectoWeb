@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $ubicacion = "Listo rol | Store dark";
 require("config/config.php");
 require("config/db.php");
