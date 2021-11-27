@@ -12,8 +12,8 @@
 		<nav class="menu">
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Store Dark</a>
 			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Productos</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Comunidad</a>
-			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>index.php">Centro Ayuda</a>
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>comunidad.php">Comunidad</a>
+			<a class="nav-link active" aria-current="page" href="<?php echo $BASE_ROOT_URL; ?>centro_ayuda.php">Centro Ayuda</a>
 
 			<?php
 			if (isset($_SESSION) && isset($_SESSION['correo'])) {
